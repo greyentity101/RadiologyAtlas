@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohit Kumar — Software Developer & AI Researcher. Healthcare IT, PACS, Medical Imaging AI, Radiology Atlas, Google Apps Launcher.">
+  <meta name="theme-color" content="#040a14">
+  <title>Mohit Kumar — Developer & AI Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" media="print" onload="this.media='all'">
+  <style>
+    :root{
+      --bg-0:#03070f; --bg-1:#060d1a; --bg-2:#0a152a; --bg-3:#0f2040;
+      --panel:#0b1426; --panel-2:#0d1e36; --line:#142847; --line-strong:#1e3a5f;
+      --text:#eaf2ff; --text-2:#b8cce6; --muted:#7e95b3; --faint:#5a718c;
+      --cyan:#00e5ff; --cyan-2:#22d3ee; --violet:#7c5cff; --green:#10e38a; --amber:#ffb224;
+      --radius:14px; --r-sm:9px; --ease:cubic-bezier(.16,1,.3,1);
+      --shadow:0 16px 40px rgba(2,10,24,.65), 0 2px 10px rgba(2,10,24,.45);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Figtree',system-ui,sans-serif;background:var(--bg-0);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:var(--cyan);text-decoration:none;transition:color .15s var(--ease)} a:hover{color:var(--cyan-2)}
+    .mono{font-family:'JetBrains Mono',monospace}
+    .container{max-width:960px;margin:0 auto;padding:0 20px}
+    header{padding:60px 0 40px;border-bottom:1px solid var(--line);background:radial-gradient(600px 300px at 50% -50%,rgba(0,229,255,.06),transparent 70%)}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand-mark{width:44px;height:44px;border-radius:12px;background:conic-gradient(from 180deg at 50% 50%,#4285F4,#EA4335,#FBBC05,#34A853,#4285F4);display:grid;place-items:center;color:#fff;font-weight:900;font-size:1.1rem;letter-spacing:-1px;box-shadow:0 8px 24px rgba(66,133,244,.3)}
+    .brand-text h1{font-size:1.5rem;font-weight:800;letter-spacing:-.03em}
+    .brand-text p{font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin-top:2px}
+    nav{margin-top:32px;display:flex;gap:8px;flex-wrap:wrap}
+    nav a{padding:10px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);color:var(--text-2);font-size:.85rem;font-weight:600;transition:all .15s var(--ease)}
+    nav a:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,229,255,.08)}
+    main{padding:60px 0}
+    section{margin-bottom:60px}
+    h2{font-size:1.75rem;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;color:var(--text)}
+    .section-sub{color:var(--muted);margin-bottom:28px;max-width:60ch}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+    .card{background:linear-gradient(180deg,rgba(13,27,45,.9),rgba(10,20,38,.9));border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .15s var(--ease),border-color .15s var(--ease),box-shadow .15s var(--ease)}
+    .card:hover{transform:translateY(-2px);border-color:var(--line-strong);box-shadow:var(--shadow)}
+    .card-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:16px}
+    .card-icon.cyan{background:linear-gradient(135deg,rgba(0,229,255,.18),rgba(0,229,255,.06));color:var(--cyan);border:1px solid rgba(0,229,255,.25)}
+    .card-icon.violet{background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(124,92,255,.06));color:var(--violet);border:1px solid rgba(124,92,255,.25)}
+    .card-icon.green{background:linear-gradient(135deg,rgba(16,227,138,.18),rgba(16,227,138,.06));color:var(--green);border:1px solid rgba(16,227,138,.25)}
+    .card-icon.amber{background:linear-gradient(135deg,rgba(255,178,36,.18),rgba(255,178,36,.06));color:var(--amber);border:1px solid rgba(255,178,36,.25)}
+    .card h3{font-size:1.15rem;font-weight:750;margin-bottom:6px}
+    .card p{color:var(--text-2);font-size:.95rem;margin-bottom:16px}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+    .tag{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:600;padding:4px 8px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+    .card-actions{display:flex;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:9px;font-weight:600;font-size:.85rem;transition:all .15s var(--ease);cursor:pointer;border:none}
+    .btn-primary{background:linear-gradient(180deg,var(--cyan),var(--cyan-2));color:#02101c;border:1px solid rgba(0,229,255,.5)}
+    .btn-primary:hover{box-shadow:0 4px 16px rgba(0,229,255,.35)}
+    .btn-ghost{background:rgba(255,255,255,.06);color:var(--text-2);border:1px solid var(--line)}
+    .btn-ghost:hover{background:rgba(255,255,255,.1);color:var(--text);border-color:var(--line-strong)}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:40px;padding-top:40px;border-top:1px solid var(--line)}
+    .stat{text-align:center}
+    .stat-value{font-family:'JetBrains Mono',monospace;font-size:2.5rem;font-weight:800;color:var(--cyan);line-height:1}
+    .stat-label{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+    .about-text p{margin-bottom:16px;color:var(--text-2)}
+    .about-skills h3{font-size:1rem;font-weight:700;margin-bottom:12px;color:var(--text)}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .skill{display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:9px;transition:all .15s var(--ease)}
+    .skill:hover{border-color:var(--cyan);background:rgba(0,229,255,.06)}
+    .skill-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+    footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;text-align:center}
+    footer a{margin:0 6px}
+    @media (max-width:720px){
+      .about{grid-template-columns:1fr}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .skills-grid{grid-template-columns:1fr}
+    }
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="brand">
+      <div class="brand-mark">MK</div>
+      <div class="brand-text">
+        <h1>Mohit Kumar</h1>
+        <p>Software Developer & AI Researcher</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/greyentity101" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Featured Projects</h2>
+      <p class="section-sub">Healthcare IT, medical imaging AI, PACS/DICOM workflows, and developer tooling. Built for clinicians, radiographers, and engineers.</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-icon cyan"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div>
+          <h3>RadiologyAtlas v1.3</h3>
+          <p>Interactive 3D anatomy atlas with modality-driven rendering (X-Ray, CT, MRI, US, DEXA). Procedural + real GLB models, contrast/dose calculator, command palette, favorites, offline Windows executable.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">PyWebView</span><span class="tag">Three.js</span><span class="tag">React</span><span class="tag">Vite</span><span class="tag">DICOM</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/greyentity101/RadiologyAtlas" class="btn btn-primary" target="_blank" rel="noopener">View Repository</a>
+            <a href="https://github.com/greyentity101/RadiologyAtlas/releases" class="btn btn-ghost" target="_blank" rel="noopener">Download v1.3.0</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon violet"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Google Apps Launcher</h3>
+          <p>Dark macOS-style app grid with 24 Google services, live search, favorites, command palette. Vite React SPA + standalone Electron shell (no build dependency). Offline, single-file Windows executable.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">TanStack Router</span><span class="tag">Electron</span><span class="tag">Vite</span><span class="tag">Lucide</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/greyentity101/Google-Apps-Launcher" class="btn btn-primary" target="_blank" rel="noopener">Source Code</a>
+            <a href="https://github.com/greyentity101/Google-Apps-Launcher/releases" class="btn btn-ghost" target="_blank" rel="noopener">Download</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+          <h3>AI in Interventional Procedures</h3>
+          <p>Research paper and analysis on AI applications in interventional radiology — segmentation, guidance, dose optimization, and workflow automation. Published with reproducible notebooks.</p>
+          <div class="tags"><span class="tag">Research</span><span class="tag">PyTorch</span><span class="tag">MONAI</span><span class="tag">DICOM</span><span class="tag">Paper</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/greyentity101/AI-Interventional-Procedures" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="stats" aria-label="Project statistics">
+        <div class="stat"><div class="stat-value">3</div><div class="stat-label">Active Projects</div></div>
+        <div class="stat"><div class="stat-value">15+</div><div class="stat-label">Years Exp.</div></div>
+        <div class="stat"><div class="stat-value">100%</div><div class="stat-label">Offline-First</div></div>
+        <div class="stat"><div class="stat-value">∞</div><div class="stat-label">Coffee Cups</div></div>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div class="about">
+        <div class="about-text">
+          <p>Software developer and AI researcher bridging radiotechnology with machine learning. Focus on medical image processing, DICOM/HL7 workflows, and deep learning in healthcare — from NPTEL AI for Clinicians to Stanford/DeepLearning.AI healthcare specializations.</p>
+          <p>Current rig: Acer Nitro ANV15-51, Intel i5-13420H, 24GB DDR5, RTX 4050 6GB — optimized for fast local inference and clean memory management.</p>
+          <p>Building tools that radiographers, clinicians, and engineers actually use — offline-first, privacy-respecting, zero-bloat.</p>
+        </div>
+        <div class="about-skills">
+          <h3>Core Stack</h3>
+          <div class="skills-grid">
+            <div class="skill"><span class="skill-dot"></span><span>Python / PyTorch / MONAI</span></div>
+            <div class="skill"><span class="skill-dot"></span><span>React / TypeScript / Vite</span></div>
+            <div class="skill"><span class="skill-dot"></span><span>DICOM / PACS / HL7</span></div>
+            <div class="skill"><span class="skill-dot"></span><span>C++ / Qt / VTK / ITK</span></div>
+            <div class="skill"><span class="skill-dot"></span><span>Electron / Tauri / PyWebView</span></div>
+            <div class="skill"><span class="skill-dot"></span><span>Linux / Docker / CI/CD</span></div>
+            <div class="skill"><span class="skill-dot"></span><span>Rust / Tokio / async</span></div>
+            <div class="skill"><span class="skill-dot"></span><span>GPU Compute / CUDA / ONNX</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="card" style="max-width:600px;margin:0 auto;text-align:center">
+        <p style="color:var(--text-2);margin-bottom:20px">Open to collaborations, research partnerships, and challenging roles in healthcare AI.</p>
+        <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+          <a href="mailto:mohit.kumar@example.com" class="btn btn-primary">Email</a>
+          <a href="https://github.com/greyentity101" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+          <a href="https://linkedin.com/in/mohit-kumar-ai" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with Vite, React, and zero regrets. <a href="https://github.com/greyentity101" target="_blank" rel="noopener">Source</a> • <a href="#top">Top</a></p>
+    <p style="margin-top:8px;font-size:.75rem">© 2025 Mohit Kumar. No tracking, no analytics, no cookies.</p>
+  </footer>
+</body>
+</html>
