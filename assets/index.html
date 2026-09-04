@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="theme-liquid-glass-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiology 3D Atlas & Clinical Protocols</title>
+    <meta name="theme-color" content="#040a14">
+    <link rel="preload" href="vendor/fonts/Figtree-0.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="vendor/fonts/JetBrainsMono-0.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="vendor/three.min.js"></script>
+    <script src="vendor/OrbitControls.js"></script>
+    <script src="vendor/GLTFLoader.js"></script>
+    <script src="vendor/tween.umd.js"></script>
+</head>
+<body>
+<div id="app-shell">
+    <!-- Apple Liquid Glass Header -->
+    <header id="app-header" role="banner" class="liquid-glass-bar">
+        <div class="brand">
+            <div class="brand-mark" aria-hidden="true">
+                <span class="mark-ring"></span>
+                <span class="mark-cross"></span>
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">RADIOLOGY ATLAS</span>
+                <span class="brand-sub">Clinical 3D Engine &bull; v5.0</span>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <!-- Apple Glass Segmented Modality Controller -->
+            <div id="mode-toolbar" class="glass-segmented-control" role="toolbar" aria-label="Imaging modality">
+                <button class="mode-btn" data-mode="XRAY" aria-pressed="false" title="X-Ray (Bone Only) [1]">
+                    <span class="mode-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H7M19 12H5M17 19H7"/></svg></span>
+                    <span>X-RAY</span>
+                    <span class="key-hint">1</span>
+                </button>
+                <button class="mode-btn active" data-mode="CT" aria-pressed="true" title="Computed Tomography (Bone + Vessel + Muscle) [2]">
+                    <span class="mode-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></span>
+                    <span>CT</span>
+                    <span class="key-hint">2</span>
+                </button>
+                <button class="mode-btn" data-mode="MRI" aria-pressed="false" title="Magnetic Resonance (All Layers Harmonized) [3]">
+                    <span class="mode-icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0M6 12a6 6 0 0 1 12 0M8 12a4 4 0 0 1 8 0"/><circle cx="12" cy="12" r="1.5"/></svg></span>
+                    <span>MRI</span>
+                    <span class="key-hint">3</span>
+                </button>
+                <button class="mode-btn" data-mode="ANGIO" aria-pressed="false" title="Angiography & Vascular Roadmap [4]">
+                    <span class="mode-icon"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 6c-3 0-5 2-5 5v11M12 6c3 0 5 2 5 5v11M7 11h10M7 16h10"/></svg></span>
+                    <span>ANGIO</span>
+                    <span class="key-hint">4</span>
+                </button>
+                <button class="mode-btn" data-mode="US" aria-pressed="false" title="Ultrasound Simulation [5]">
+                    <span class="mode-icon"><svg viewBox="0 0 24 24"><path d="M2 16h20M6 12h12M10 8h4"/></svg></span>
+                    <span>US</span>
+                    <span class="key-hint">5</span>
+                </button>
+                <button class="mode-btn" data-mode="DEXA" aria-pressed="false" title="DEXA Bone Densitometry [6]">
+                    <span class="mode-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 10v10"/></svg></span>
+                    <span>DEXA</span>
+                    <span class="key-hint">6</span>
+                </button>
+            </div>
+
+            <!-- CT Tissue Layer Chips -->
+            <div id="ct-chips" class="glass-chips-bar" aria-label="CT tissue layers" style="display: flex;">
+                <button class="layer-chip" data-layer="bone" title="Toggle Bone Window">BONE</button>
+                <button class="layer-chip" data-layer="vess" title="Toggle Vascular Contrast">VESSELS</button>
+                <button class="layer-chip" data-layer="muscle" title="Toggle Muscular Tissue">MUSCLE</button>
+                <button class="layer-chip off" data-layer="organs" title="Toggle Visceral Organs">ORGANS</button>
+                <button class="layer-chip off" data-layer="skin" title="Toggle Skin Silhouette">SKIN</button>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <!-- Quick Theme Cycle Button -->
+            <button id="theme-quick-btn" class="glass-action-btn" title="Switch Theme (Liquid Glass / Obsidian / Cyber / Platinum)" aria-label="Toggle Theme">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <span class="btn-text">Theme</span>
+            </button>
+
+            <!-- Auto Rotate -->
+            <button id="auto-rotate" class="glass-action-btn" title="Toggle Auto-Rotate (Space)" aria-label="Toggle auto-rotate" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v5h-5"/></svg>
+                <span class="btn-text">Spin</span>
+            </button>
+
+            <!-- Reset View -->
+            <button id="reset-view" class="glass-action-btn" title="Reset View (R)" aria-label="Reset camera view">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.6-6.4"/><path d="M3 3v6h6"/></svg>
+                <span class="btn-text">Reset</span>
+            </button>
+
+            <!-- Settings -->
+            <button id="settings-btn" class="glass-action-btn primary" title="Tinker App Settings & Visuals" aria-label="Open settings" aria-expanded="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                <span class="btn-text">Settings</span>
+            </button>
+        </div>
+    </header>
+
+    <div id="app-container">
+        <!-- 3D Interactive Viewer Panel -->
+        <div id="viewer-panel">
+            <div id="canvas-container"></div>
+
+            <div class="viewer-frame" aria-hidden="true">
+                <span class="corner tl"></span>
+                <span class="corner tr"></span>
+                <span class="corner bl"></span>
+                <span class="corner br"></span>
+                <span class="crosshair"></span>
+            </div>
+
+            <div id="scanner-line"></div>
+
+            <!-- Apple Glass HUD Badges -->
+            <div id="scanner-hud" class="glass-hud-panel">
+                <div class="hud-item"><span class="hud-label">MODALITY</span><span class="hud-value" id="hud-modality">CT &bull; BONE + VESSEL + MUSCLE</span></div>
+                <div class="hud-item"><span class="hud-label">TELEMETRY</span><span class="hud-value" id="hud-telemetry">120 kVp &bull; 240 mAs &bull; 0.625mm</span></div>
+                <div class="hud-item right"><span class="hud-label">TARGET LOCK</span><span class="hud-value highlight" id="target-lock">NO SELECTION</span></div>
+            </div>
+
+            <div class="hud-legend" aria-hidden="true">
+                <span class="dot"></span> Click structure for protocol &bull; Double-click to zoom in &bull; <strong>1&ndash;6</strong> Modalities &bull; <strong>R</strong> Reset view
+            </div>
+            <div id="tooltip"></div>
+        </div>
+
+        <!-- Protocol & Clinical Reference Panel -->
+        <div id="info-panel" class="liquid-glass-sidebar">
+            <div class="header">
+                <div class="header-title">
+                    <h1>Clinical Protocol Atlas</h1>
+                    <p>Radiology protocols, technical imaging parameters, positioning, and anatomy.</p>
+                </div>
+
+                <!-- Apple Glass Search Bar -->
+                <div class="search-container search-wrap glass-search">
+                    <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+                    <label for="search-bar" class="sr-only">Search protocols, structures, indications and positioning</label>
+                    <input type="text" id="search-bar" placeholder="Search CT, MRI, X-Ray protocols or anatomy…" autocomplete="off">
+                    <span class="search-kbd">/</span>
+                </div>
+
+                <!-- Region Navigation Pills -->
+                <nav id="region-tabs" class="glass-nav-pills" aria-label="Body regions">
+                    <button class="region-tab active" data-region="Head">Head</button>
+                    <button class="region-tab" data-region="Neck">Neck</button>
+                    <button class="region-tab" data-region="Chest">Chest</button>
+                    <button class="region-tab" data-region="Abdomen">Abdomen</button>
+                    <button class="region-tab" data-region="Spine">Spine</button>
+                    <button class="region-tab" data-region="UpperLimb">Upper Limb</button>
+                    <button class="region-tab" data-region="LowerLimb">Lower Limb</button>
+                </nav>
+            </div>
+
+            <div id="content-display">
+                <div class="empty-state">
+                    <div class="empty-card glass-card">
+                        <div class="empty-medal" aria-hidden="true">
+                            <svg viewBox="0 0 32 32"><circle cx="16" cy="11" r="7"/><path d="M12 17 10 28l6-4 6 4-2-11"/></svg>
+                        </div>
+                        <h3>Interactive Radiology Protocols</h3>
+                        <p>Select an anatomical region above or click any bone, blood vessel, muscle, or organ in the 3D model.</p>
+                        <div class="empty-hints">
+                            <span><strong>Click</strong> for clinical protocol sheet</span>
+                            <span><strong>Double-click</strong> to fly in</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Apple Liquid Glass Settings Dialog ("Tinker the App") -->
+<div id="settings-panel" class="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settings-title" hidden>
+    <div class="settings-backdrop" tabindex="-1"></div>
+    <div class="settings-glass-card">
+        <header class="settings-header">
+            <div class="settings-header-title">
+                <div class="settings-icon-badge">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </div>
+                <div>
+                    <h2 id="settings-title">App Studio &amp; Tinker Controls</h2>
+                    <p class="settings-subtitle">Customize themes, lighting, exposure, 3D anatomical layers &amp; rendering.</p>
+                </div>
+            </div>
+            <button id="settings-close" class="glass-close-btn" aria-label="Close settings">
+                <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+        </header>
+
+        <div class="settings-body">
+            <!-- Theme Selection -->
+            <section class="settings-section glass-box">
+                <div class="section-badge">APPEARANCE</div>
+                <h3>Theme Preset</h3>
+                <div class="setting-row">
+                    <label for="theme-select">Select Theme</label>
+                    <select id="theme-select" class="glass-select">
+                        <option value="theme-liquid-glass-dark">Apple Liquid Glass (Dark Obsidian)</option>
+                        <option value="theme-liquid-glass-frost">Apple Liquid Glass (Frost Ice)</option>
+                        <option value="theme-obsidian-gold">Obsidian Gold (Luxury Contrast)</option>
+                        <option value="theme-midnight-cyber">Midnight Cyber (Electric Neon)</option>
+                        <option value="theme-clinical-platinum">Clinical Platinum (Hospital Diagnostic)</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Lighting & Exposure Tinker -->
+            <section class="settings-section glass-box">
+                <div class="section-badge">LIGHTING &amp; EXPOSURE</div>
+                <h3>3D Shader Tuning</h3>
+                <div class="setting-row">
+                    <label for="exposure-slider">Tone Mapping Exposure</label>
+                    <div class="slider-wrap">
+                        <input type="range" id="exposure-slider" min="0.5" max="2.5" step="0.05" value="1.12">
+                        <span id="exposure-value" class="slider-val">1.12</span>
+                    </div>
+                </div>
+                <div class="setting-row">
+                    <label for="tonemap-select">Tone Mapping Algorithm</label>
+                    <select id="tonemap-select" class="glass-select">
+                        <option value="aces">ACES Filmic</option>
+                        <option value="reinhard">Reinhard</option>
+                        <option value="cineon">Cineon</option>
+                        <option value="none">Linear / None</option>
+                    </select>
+                </div>
+                <div class="setting-row">
+                    <label for="ambient-slider">Ambient Fill Light</label>
+                    <div class="slider-wrap">
+                        <input type="range" id="ambient-slider" min="0.1" max="1.5" step="0.05" value="0.28">
+                        <span id="ambient-value" class="slider-val">0.28</span>
+                    </div>
+                </div>
+                <div class="setting-row">
+                    <label for="keylight-slider">Key Directional Light</label>
+                    <div class="slider-wrap">
+                        <input type="range" id="keylight-slider" min="0.2" max="2.5" step="0.05" value="1.05">
+                        <span id="keylight-value" class="slider-val">1.05</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3D Anatomical Layer Master Toggles -->
+            <section class="settings-section glass-box">
+                <div class="section-badge">ANATOMY LAYERS</div>
+                <h3>Master Layer Toggles</h3>
+                <div class="setting-layer-grid">
+                    <div class="layer-control-card">
+                        <div class="layer-header">
+                            <label><input type="checkbox" id="layer-master-bone" checked> Bones</label>
+                            <span class="badge-tag">Osseous</span>
+                        </div>
+                        <input type="range" id="opacity-bone" min="0.1" max="1.0" step="0.05" value="0.95" title="Bone Opacity">
+                    </div>
+
+                    <div class="layer-control-card">
+                        <div class="layer-header">
+                            <label><input type="checkbox" id="layer-master-vess" checked> Blood Vessels</label>
+                            <span class="badge-tag cyan">Angio</span>
+                        </div>
+                        <input type="range" id="opacity-vess" min="0.1" max="1.0" step="0.05" value="1.0" title="Vessel Opacity">
+                    </div>
+
+                    <div class="layer-control-card">
+                        <div class="layer-header">
+                            <label><input type="checkbox" id="layer-master-muscle" checked> Muscle Tissue</label>
+                            <span class="badge-tag red">Soft</span>
+                        </div>
+                        <input type="range" id="opacity-muscle" min="0.1" max="1.0" step="0.05" value="0.75" title="Muscle Opacity">
+                    </div>
+
+                    <div class="layer-control-card">
+                        <div class="layer-header">
+                            <label><input type="checkbox" id="layer-master-organs"> Internal Organs</label>
+                            <span class="badge-tag">Visceral</span>
+                        </div>
+                        <input type="range" id="opacity-organs" min="0.1" max="1.0" step="0.05" value="0.85" title="Organ Opacity">
+                    </div>
+
+                    <div class="layer-control-card">
+                        <div class="layer-header">
+                            <label><input type="checkbox" id="layer-master-skin"> Skin Silhouette</label>
+                            <span class="badge-tag">Surface</span>
+                        </div>
+                        <input type="range" id="opacity-skin" min="0.05" max="0.8" step="0.05" value="0.15" title="Skin Opacity">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Camera & Motion Controls -->
+            <section class="settings-section glass-box">
+                <div class="section-badge">CAMERA &amp; MOTION</div>
+                <h3>Interaction &amp; Viewport</h3>
+                <div class="setting-row">
+                    <label for="autorotate-speed">Auto-Rotate Speed</label>
+                    <div class="slider-wrap">
+                        <input type="range" id="autorotate-speed" min="0.2" max="4.0" step="0.1" value="1.6">
+                        <span id="autorotate-value" class="slider-val">1.6x</span>
+                    </div>
+                </div>
+                <div class="setting-row">
+                    <label for="fov-slider">Field of View (FOV)</label>
+                    <div class="slider-wrap">
+                        <input type="range" id="fov-slider" min="30" max="75" step="1" value="45">
+                        <span id="fov-value" class="slider-val">45&deg;</span>
+                    </div>
+                </div>
+                <div class="setting-row">
+                    <label for="damping-slider">Orbit Damping (Inertia)</label>
+                    <div class="slider-wrap">
+                        <input type="range" id="damping-slider" min="0.01" max="0.2" step="0.01" value="0.05">
+                        <span id="damping-value" class="slider-val">0.05</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visual Diagnostic Overlays -->
+            <section class="settings-section glass-box">
+                <div class="section-badge">OVERLAYS</div>
+                <h3>Diagnostic HUD &amp; Grid</h3>
+                <div class="setting-toggle-row">
+                    <label class="glass-toggle">
+                        <input type="checkbox" id="scanner-toggle" checked>
+                        <span class="toggle-track"></span>
+                        <span class="toggle-label">CT Scanner Line Sweep</span>
+                    </label>
+                    <label class="glass-toggle">
+                        <input type="checkbox" id="hud-toggle" checked>
+                        <span class="toggle-track"></span>
+                        <span class="toggle-label">Telemetry HUD Panel</span>
+                    </label>
+                    <label class="glass-toggle">
+                        <input type="checkbox" id="crosshair-toggle" checked>
+                        <span class="toggle-track"></span>
+                        <span class="toggle-label">Target Reticle &amp; Crosshair</span>
+                    </label>
+                    <label class="glass-toggle">
+                        <input type="checkbox" id="grid-toggle" checked>
+                        <span class="toggle-track"></span>
+                        <span class="toggle-label">Diagnostic Floor Grid</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Reset Button -->
+            <div class="settings-actions">
+                <button id="reset-settings-btn" class="glass-danger-btn">
+                    <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 2.6-6.4"/><path d="M3 3v6h6"/></svg>
+                    <span>Reset All Settings to Defaults</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="anatomy.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

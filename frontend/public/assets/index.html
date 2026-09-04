@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Radiology 3D Atlas</title>
+    <meta name="theme-color" content="#040a14">
+    <link rel="preload" href="vendor/fonts/Figtree-0.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="vendor/fonts/JetBrainsMono-0.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="vendor/three.min.js"></script>
+    <script src="vendor/OrbitControls.js"></script>
+    <script src="vendor/GLTFLoader.js"></script>
+    <script src="vendor/tween.umd.js"></script>
+</head>
+<body>
+<div id="app-shell">
+    <!-- App header -->
+    <header id="app-header" role="banner">
+        <div class="brand">
+            <div class="brand-mark" aria-hidden="true">
+                <span class="mark-ring"></span>
+                <span class="mark-cross"></span>
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">ATLAS</span>
+                <span class="brand-sub">Radiology Protocol</span>
+            </div>
+        </div>
+        <div class="header-center">
+            <div id="mode-toolbar" role="toolbar" aria-label="Imaging modality">
+                <button class="mode-btn active" data-mode="XRAY" aria-pressed="true">X-RAY <span class="key-hint">1</span></button>
+                <button class="mode-btn" data-mode="CT" aria-pressed="false">CT <span class="key-hint">2</span></button>
+                <button class="mode-btn" data-mode="MRI" aria-pressed="false">MRI <span class="key-hint">3</span></button>
+                <button class="mode-btn" data-mode="ANGIO" aria-pressed="false">ANGIO <span class="key-hint">4</span></button>
+                <button class="mode-btn" data-mode="US" aria-pressed="false">US <span class="key-hint">5</span></button>
+                <button class="mode-btn" data-mode="DEXA" aria-pressed="false">DEXA <span class="key-hint">6</span></button>
+            </div>
+            <div id="ct-chips" aria-label="CT tissue layers">
+                <button class="layer-chip" data-layer="bone">BONE</button>
+                <button class="layer-chip" data-layer="soft">SOFT</button>
+                <button class="layer-chip" data-layer="vess">VESSELS</button>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button id="auto-rotate" class="icon-btn" title="Toggle auto-rotate" aria-label="Toggle auto-rotate" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v5h-5"/></svg>
+                <span>Spin</span>
+            </button>
+            <button id="reset-view" class="icon-btn" title="Reset view (R)" aria-label="Reset camera view (R)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.6-6.4"/><path d="M3 3v6h6"/></svg>
+                <span>Reset</span>
+            </button>
+            <button id="settings-btn" class="icon-btn" title="Settings" aria-label="Open settings" aria-expanded="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="app-container">
+        <!-- Viewer -->
+        <div id="viewer-panel">
+            <div id="canvas-container"></div>
+
+            <div class="viewer-frame" aria-hidden="true">
+                <span class="corner tl"></span>
+                <span class="corner tr"></span>
+                <span class="corner bl"></span>
+                <span class="corner br"></span>
+                <span class="crosshair"></span>
+            </div>
+
+            <div id="scanner-line"></div>
+
+            <div id="scanner-hud">
+                <span class="hud-text">MODE: X-RAY</span>
+                <span class="hud-text right" id="target-lock">NO TARGET</span>
+            </div>
+            <div class="hud-legend" aria-hidden="true">
+                <span class="dot"></span> Click structure for protocol · Double-click to fly in · <strong>R</strong> reset · <strong>1–6</strong> modality
+            </div>
+            <div id="tooltip"></div>
+        </div>
+
+        <!-- Info -->
+        <div id="info-panel">
+            <div class="header">
+                <div class="header-title">
+                    <h1>Protocol Atlas</h1>
+                    <p>Procedure · imaging &amp; positioning reference — click anatomy or pick a region.</p>
+                </div>
+                <div class="search-container search-wrap">
+                    <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+                    <label for="search-bar" class="sr-only">Search protocols, structures, indications and positioning</label>
+                    <input type="text" id="search-bar" placeholder="Search protocols, structures, indications…" autocomplete="off">
+                    <span class="search-kbd">/</span>
+                </div>
+                <nav id="region-tabs" aria-label="Body regions">
+                    <button class="region-tab" data-region="Head">Head</button>
+                    <button class="region-tab" data-region="Neck">Neck</button>
+                    <button class="region-tab" data-region="Chest">Chest</button>
+                    <button class="region-tab" data-region="Abdomen">Abdomen</button>
+                    <button class="region-tab" data-region="Spine">Spine</button>
+                    <button class="region-tab" data-region="UpperLimb">Upper Limb</button>
+                    <button class="region-tab" data-region="LowerLimb">Lower Limb</button>
+                </nav>
+            </div>
+
+            <div id="content-display">
+                <div class="empty-state">
+                    <div class="empty-card">
+                        <div class="empty-medal" aria-hidden="true">
+                            <svg viewBox="0 0 32 32"><circle cx="16" cy="11" r="7"/><path d="M12 17 10 28l6-4 6 4-2-11"/></svg>
+                        </div>
+                        <h3>Select a region to begin</h3>
+                        <p>Pick a body region above, or click any bone, organ or vessel in the viewer.</p>
+                        <div class="empty-hints">
+                            <span><strong>Click</strong> for sheet</span>
+                            <span><strong>Double-click</strong> to fly in</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="settings-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title" hidden>
+        <div class="settings-backdrop" tabindex="-1"></div>
+        <div class="settings-card">
+            <header class="settings-header">
+                <h2 id="settings-title">Settings</h2>
+                <button id="settings-close" class="icon-btn" aria-label="Close settings"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+            </header>
+            <div class="settings-body">
+                <section class="settings-section">
+                    <h3>Rendering</h3>
+                    <div class="setting-row">
+                        <label>Quality</label>
+                        <select id="quality-preset">
+                            <option value="high">High (64 seg)</option>
+                            <option value="medium">Medium (32 seg)</option>
+                            <option value="low">Low (16 seg)</option>
+                        </select>
+                    </div>
+                    <div class="setting-row">
+                        <label>Antialiasing</label>
+                        <input type="checkbox" id="aa-toggle" checked>
+                    </div>
+                    <div class="setting-row">
+                        <label>Tone Mapping</label>
+                        <select id="tonemap-select">
+                            <option value="aces">ACES Filmic</option>
+                            <option value="reinhard">Reinhard</option>
+                            <option value="cineon">Cineon</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                    <div class="setting-row">
+                        <label>Exposure</label>
+                        <input type="range" id="exposure-slider" min="0.5" max="2.0" step="0.05" value="1.12">
+                        <span id="exposure-value">1.12</span>
+                    </div>
+                </section>
+                <section class="settings-section">
+                    <h3>CT Layers</h3>
+                    <div class="setting-row">
+                        <label>Bone</label>
+                        <input type="checkbox" id="ct-bone" checked>
+                    </div>
+                    <div class="setting-row">
+                        <label>Soft Tissue</label>
+                        <input type="checkbox" id="ct-soft" checked>
+                    </div>
+                    <div class="setting-row">
+                        <label>Vessels</label>
+                        <input type="checkbox" id="ct-vess" checked>
+                    </div>
+                </section>
+                <section class="settings-section">
+                    <h3>Visualization</h3>
+                    <div class="setting-row">
+                        <label>Scanner Line</label>
+                        <input type="checkbox" id="scanner-toggle" checked>
+                    </div>
+                    <div class="setting-row">
+                        <label>HUD</label>
+                        <input type="checkbox" id="hud-toggle" checked>
+                    </div>
+                    <div class="setting-row">
+                        <label>Crosshair</label>
+                        <input type="checkbox" id="crosshair-toggle" checked>
+                    </div>
+                    <div class="setting-row">
+                        <label>Grid</label>
+                        <input type="checkbox" id="grid-toggle" checked>
+                    </div>
+                </section>
+                <section class="settings-section">
+                    <h3>Performance</h3>
+                    <div class="setting-row">
+                        <label>Auto-rotate Speed</label>
+                        <input type="range" id="autorotate-speed" min="0" max="3" step="0.1" value="1.6">
+                        <span id="autorotate-value">1.6</span>
+                    </div>
+                    <div class="setting-row">
+                        <label>Damping</label>
+                        <input type="range" id="damping-slider" min="0.01" max="0.2" step="0.01" value="0.05">
+                        <span id="damping-value">0.05</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+<script src="anatomy.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

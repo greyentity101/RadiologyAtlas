@@ -1,0 +1,821 @@
+{
+  "Head": {
+    "title": "Head & Brain Radiology Reference",
+    "content": "<p>Comprehensive neuroimaging reference covering acute stroke triage (CT/CTA vs MRI/MRA), non-contrast head CT (ASPECTS scoring), intracranial time-of-flight MRA (Circle of Willis), skull base, sella/pituitary, internal auditory meatus (CISS), and whole brain volumetric MRI protocols.</p><details><summary>ASPECTS Acute Stroke Scoring System</summary><div class='details-content'><p>10-point quantitative CT score for middle cerebral artery (MCA) territory acute ischemic stroke. Points deducted for early ischemic hypoattenuation: Subcortical (Caudate, Lentiform, Internal capsule) and Cortical (Insular ribbon, M1 anterior, M2 temporal, M3 posterior, M4, M5, M6 corona radiata). Score &ge;6 predicts favorable thrombectomy outcome within 6–24 hours.</p></div></details><details><summary>3D Time-of-Flight (TOF) MRA Physics</summary><div class='details-content'><p>Flow-related enhancement exploits unsaturated, fully magnetized blood spins flowing into the imaging slab, suppressing stationary brain parenchyma with repetitive RF pulses. Zero gadolinium required. Crucial for detecting saccular aneurysms, AVM nidus feeding vessels, and arterial dissections.</p></div></details>",
+    "procedures": [
+      {
+        "id": "mra_brain",
+        "name": "Brain MRA",
+        "modality": "MRA",
+        "indications": [
+          "Intracranial saccular aneurysms",
+          "Arteriovenous malformation (AVM)",
+          "Intracranial arterial stenosis / Moyamoya",
+          "Carotid siphon dissection"
+        ],
+        "contrast": "IV Gadolinium Chelate (0.1 mmol/kg @ 2 mL/s) + 20 mL saline flush",
+        "technique": {
+          "TR": "21–25 ms",
+          "TE": "3.4–4.2 ms",
+          "Flip Angle": "18–20°",
+          "Voxel": "0.5×0.5×0.6 mm",
+          "MOTSA": "3 overlapping slabs"
+        },
+        "positioning": "Patient supine, head-first. Standard 32-channel or 64-channel head matrix coil. Align slab parallel to ACP-PCP line covering foramen magnum through corpus callosum.",
+        "notes": "MRA stands for magnetic resonance angiography. MRA of the brain is used to assess abnormalities in the arterial blood supply system of the brain. The most frequently employed method for assessing the brain’s arterial blood supply system is the three-dimensional (3D) time-of-flight (TOF) MRA. This technique offers advantages such as improved signal-to-noise ratio and shorter imaging times. One of the notable benefits of MRA brain is its simplicity, as it can be easily performed without the need for contrast administration."
+      },
+      {
+        "id": "mri_brain_routine",
+        "name": "Pediatric Brain MRI Planning",
+        "modality": "MRI",
+        "indications": [
+          "Secondly, dual echo scans aid in lesion detection",
+          "Certain brain abnormalities, such as specific tumors or white matter lesions, may be more pronounced on PD-weighted images, whereas cysts or fluid-filled structures are better visualized on T2-weighted images",
+          "Simultaneously acquiring both sequences increases the likelihood of detecting a broader range of lesions, thereby enhancing diagnostic confidence"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Axial T1, T2, 3D FLAIR, DWI/ADC",
+          "Slice": "4.0 mm / 1.0 mm skip",
+          "b-values": "b=0, b=1000 s/mm²",
+          "Matrix": "320×256"
+        },
+        "positioning": "Plan the axial slices on the sagittal plane and position the block parallel to the genu and splenium of the corpus callosum. Verify the planning block in the other two planes and ensure that an appropriate angle is maintained in the coronal plane, making it perpendicular to the line of the midline of the brain and the 4th ventricle. Ensure that the number of slices is sufficient to cover the entire brain from the vertex to the line of the foramen magnum.",
+        "notes": "Restricted diffusion (bright DWI, dark ADC) indicates cytotoxic edema in acute infarction within 30 minutes of onset."
+      },
+      {
+        "id": "mri_epilepsy",
+        "name": "MRI Brain Epilepsy",
+        "modality": "MRI",
+        "indications": [
+          "Intractable temporal lobe epilepsy",
+          "Mesial temporal sclerosis",
+          "Focal cortical dysplasia (FCD)",
+          "Hippocampal volume loss"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Coronal Oblique 3D T1 MPRAGE, Coronal T2, Coronal FLAIR",
+          "Thickness": "2.0 mm contiguous",
+          "Plane": "Perpendicular to long axis of hippocampus"
+        },
+        "positioning": "Plan the axial slices on the sagittal plane and position the block parallel to the genu and splenium of the corpus callosum. Verify the planning block in the other two planes and ensure that an appropriate angle is maintained in the coronal plane, making it perpendicular to the line of the midline of the brain and the 4th ventricle. Ensure that the number of slices is sufficient to cover the entire brain from the vertex to the line of the foramen magnum.",
+        "notes": "Hippocampal sclerosis presents with hyperintense T2/FLAIR signal and loss of normal digitation/internal architecture."
+      },
+      {
+        "id": "mri_ms",
+        "name": "Multiple sclerosis (MS) MRI protocol and planning",
+        "modality": "MRI",
+        "indications": [
+          "Clinically isolated syndrome (CIS)",
+          "McDonald criteria dissemination in space/time",
+          "Dawson fingers",
+          "Optic neuritis"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Sagittal 3D FLAIR, Axial T2, Axial DWI, Post-contrast 3D T1",
+          "Voxel": "1.0 mm isotropic",
+          "FLAIR TR/TE/TI": "5000/390/1800 ms"
+        },
+        "positioning": "Plan the axial slices on the sagittal plane and position the block parallel to the genu and splenium of the corpus callosum. Verify the positioning block in the other two planes and ensure that an appropriate angle is maintained in the coronal plane, making it perpendicular to the line of the midline of the brain and the 4th ventricle. Ensure that the number of slices is sufficient to cover the entire brain from the vertex to the line of the foramen magnum.",
+        "notes": "Periventricular oriented plaques ('Dawson fingers') and juxtacortical/infratentorial lesions fulfill McDonald 2017 dissemination criteria."
+      },
+      {
+        "id": "mri_trigeminal",
+        "name": "Trigeminal Nerve(CN V) MRI Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "Trigeminal neuralgia is a debilitating condition characterized by severe facial pain originating from the trigeminal nerve",
+          "The intense, electric shock-like pain episodes can significantly impact a person’s daily life, causing difficulty with eating, speaking, and even simple facial movements"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequence": "3D CISS / FIESTA / SPACE",
+          "Slice": "0.6 mm isotropic",
+          "FOV": "160 mm",
+          "Matrix": "320×320"
+        },
+        "positioning": "Plan the coronal slices on the sagittal plane; angle the positioning block perpendicular to the hard palate. Check the positioning block in the other two planes. Provide an appropriate angle in the axial plane (perpendicular to the nasal septum). The slices must be sufficient to cover the entire face from the nose to the level of the fourth ventricle.",
+        "notes": "Sub-millimeter T2-weighted steady-state sequence provides extreme contrast between bright CSF and dark cranial nerves/arteries."
+      },
+      {
+        "id": "mri_iam",
+        "name": "Internal Auditory Meatus(IAMS) MRI",
+        "modality": "MRI",
+        "indications": [
+          "Sensorineural hearing loss",
+          "Vestibular schwannoma (Acoustic neuroma)",
+          "Pulsatile tinnitus",
+          "Facial nerve palsy"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "3D CISS Axial, Coronal T2 thin, Axial T1 pre/post",
+          "Slice": "0.6 mm",
+          "FOV": "180 mm"
+        },
+        "positioning": "Plan the axial slices on the sagittal plane and position the block parallel to the genu and splenium of the corpus callosum. Verify the planning block in the other two planes and ensure that an appropriate angle is maintained in the coronal plane, making it perpendicular to the line of the midline of the brain and the 4th ventricle. Ensure that the number of slices is sufficient to cover the entire brain from the vertex to the line of the foramen magnum.",
+        "notes": "CISS visualizes CN VII and CN VIII within the internal auditory canal. Tiny intracanalicular schwannomas enhance avidly post-gadolinium."
+      },
+      {
+        "id": "mri_orbits",
+        "name": "MRI Orbits Planning",
+        "modality": "MRI",
+        "indications": [
+          "Optic neuritis",
+          "Thyroid eye disease (Graves' orbitopathy)",
+          "Orbital pseudotumor",
+          "Visual field defect"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Coronal T2 FS, Coronal T1 FS post-Gd, Axial T2",
+          "Slice": "2.5 mm thin",
+          "Matrix": "256×256"
+        },
+        "positioning": "Plan the axial slices on the sagittal plane and position the block parallel to the genu and splenium of the corpus callosum. Verify the planning block in the other two planes and ensure that an appropriate angle is maintained in the coronal plane, making it perpendicular to the line of the midline of the brain and the 4th ventricle. Ensure that the number of slices is sufficient to cover the entire brain from the vertex to the line of the foramen magnum.",
+        "notes": "Fat suppression (STIR or Dixon) mandatory to suppress hyperintense orbital intraconal fat, highlighting optic nerve inflammation."
+      },
+      {
+        "id": "mri_tmj",
+        "name": "Temporomandibular Joints (TMJ'S) MRI Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "Jaw clicking / Locking",
+          "Anterior disc displacement with/without reduction",
+          "TMJ pain / Degenerative arthritis"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Sagittal Oblique Closed & Open Mouth T1/T2",
+          "Coil": "Dedicated bilateral TMJ surface coils",
+          "Slice": "2.0 mm"
+        },
+        "positioning": "Magnetic resonance imaging (MRI) is the most valuable and extensively utilized imaging technique for assessing the temporomandibular joint (TMJ). In comparison to computed tomography (CT) and arthrography, MRI offers superior tissue contrast, enabling clear visualization of soft tissues and other articular structures within the TMJ. Notably, MRI allows for direct visualization of the articular disc without the need for any contrast medium, giving it an edge over arthrography. The proper selection of coils and meticulous imaging techniques significantly contribute to successful TMJ imaging.",
+        "notes": "The articular disc should rest at the 12 o'clock position above the mandibular condyle. Anterior displacement with reduction recaptures condyle on opening."
+      },
+      {
+        "id": "cta_head_neck",
+        "name": "CTA Head & Neck (Stroke Code Protocol)",
+        "modality": "CTA",
+        "indications": [
+          "Acute ischemic stroke (Large Vessel Occlusion)",
+          "Carotid / Vertebral artery dissection",
+          "Subarachnoid hemorrhage (Aneurysm hunting)",
+          "Pulsatile neck mass"
+        ],
+        "contrast": "65–80 mL non-ionic iodinated (350–370 mgI/mL) @ 4.5–5.0 mL/s + 40 mL saline flush",
+        "technique": {
+          "Detector": "128-slice / dual source",
+          "kVp": "100–120",
+          "Pitch": "0.8",
+          "Coverage": "Aortic arch to skull vertex",
+          "SmartPrep": "Bolus tracking ROI in ascending aorta (trigger 120 HU)"
+        },
+        "positioning": "Patient supine, head resting in dedicated stroke head holder. Arms down by sides with gentle caudal traction. Chin slightly tucked.",
+        "notes": "Acquired seamlessly from arch to vertex in under 3.5 seconds. Reconstruct 0.625 mm axial slices plus coronal/sagittal MIPs."
+      }
+    ]
+  },
+  "Neck": {
+    "title": "Neck & Supra-Aortic Vasculature Reference",
+    "content": "<p>Clinical protocols for cervical spine, thyroid, larynx, pharynx, deep neck spaces, and carotid/vertebral arterial systems. Emphasizes contrast-enhanced MRA, carotid bifurcation plaque vulnerability, and emergency CT angiography.</p>",
+    "procedures": [
+      {
+        "id": "mra_neck",
+        "name": "Magnetic Resonance Angiography( MRA) Neck Dissection",
+        "modality": "MRA",
+        "indications": [
+          "Carotid stenosis quantification (NASCET)",
+          "Carotid bulb ulcerated plaque",
+          "Vertebral artery dissection",
+          "Subclavian steal syndrome"
+        ],
+        "contrast": "IV Gadolinium Chelate (0.1 mmol/kg @ 2 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Time-resolved 3D CE-MRA + 2D TOF",
+          "TR/TE": "3.1/1.1 ms",
+          "Voxel": "0.8×0.8×0.9 mm",
+          "Temporal": "2.5 s/frame"
+        },
+        "positioning": "Plan the sagittal slices on the coronal localizer: angle the positioning block parallel to the cervical spine. Check the positioning block in the other two planes. An appropriate angle must be given in the axial plane (parallel to the midline of the brain). Slices must be sufficient to cover the neck from the right pinna to the left pinna. The field of view (FOV) must be big enough to cover the entire neck from the frontal sinus down to the aortic arch",
+        "notes": "For the axial T1 fat saturation scans, set the phase direction from right to left with at least 100% oversampling. Keep the phase field of view (FOV) small enough to only cover the neck, as using a large phase FOV may lead to improper fat saturation."
+      },
+      {
+        "id": "mri_soft_neck",
+        "name": "MRI soft tissue neck planning and protocols",
+        "modality": "MRI",
+        "indications": [
+          "Squamous cell carcinoma staging",
+          "Deep neck space abscess",
+          "Salivary gland tumors (Parotid/Submandibular)",
+          "Cervical lymphadenopathy"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Axial T1, Axial T2 FS, Coronal STIR, Post-contrast T1 FS",
+          "Slice": "3.5 mm",
+          "Matrix": "288×256"
+        },
+        "positioning": "Plan the axial slices on the sagittal plane: angle the planning block horizontally across the neck (approximately parallel to the hard palate in a chin-down position). Check the planning  block in the other two planes. An appropriate angle must be given in the coronal plane (perpendicular to the cervical spine). Slices must be sufficient to cover the soft tissue of the neck from the frontal sinus down to the line of the sterno-clavicular joint. The phase direction in the axial scans must be right to left with 100% oversample. This will reduce wrap around, arterial pulsation and swallowing artifacts.",
+        "notes": "Dixon fat suppression provides homogenous suppression across the challenging neck air-tissue interfaces."
+      },
+      {
+        "id": "mri_b_plexus",
+        "name": "Brachial Plexus MRI Protocols, Planning and Indications",
+        "modality": "MRI",
+        "indications": [
+          "Thoracic outlet syndrome",
+          "Brachial plexus traction / Avulsion trauma",
+          "Pancoast superior sulcus tumor",
+          "Neuralgic amyotrophy (Parsonage-Turner)"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Coronal Oblique STIR, Coronal 3D T2 SPACE, Axial T1",
+          "Slice": "2.5 mm contiguous",
+          "FOV": "240 mm"
+        },
+        "positioning": "Patient supine, arms by side. Coronal oblique slab angled along the course of roots C5-T1 toward the axilla.",
+        "notes": "STIR provides high sensitivity for post-ganglionic edema and nerve root sheath avulsion pseudomeningoceles."
+      },
+      {
+        "id": "cta_carotids",
+        "name": "CTA Carotid Bifurcation & Plaque Analysis",
+        "modality": "CTA",
+        "indications": [
+          "TIA / Amaurosis fugax",
+          "Carotid endarterectomy (CEA) planning",
+          "Carotid artery stenting (CAS) evaluation",
+          "Near-occlusion with string sign"
+        ],
+        "contrast": "60 mL iodinated contrast @ 4.0 mL/s + 40 mL saline flush",
+        "technique": {
+          "kVp": "100",
+          "Slice": "0.625 mm",
+          "Iterative": "ASiR-V 50%",
+          "Recon": "Curved planar reformation (CPR) along carotid lumen"
+        },
+        "positioning": "Patient supine, head centered in cradle, chin elevated 10° to separate submandibular gland from carotid bifurcation.",
+        "notes": "Quantify percent diameter reduction according to NASCET criteria: (1 - narrowest diameter / normal distal ICA diameter) × 100."
+      }
+    ]
+  },
+  "Chest": {
+    "title": "Cardiothoracic & Pulmonary Vascular Reference",
+    "content": "<p>Cardiovascular and thoracic protocols encompassing cardiac morphology, cine ventricular function, late gadolinium enhancement (LGE), adenosine stress perfusion, CT pulmonary angiography (PE protocol), and thoracic aortic dissection imaging.</p>",
+    "procedures": [
+      {
+        "id": "mri_cardiac",
+        "name": "Cardiac MRI protocols, Planning and Techniques",
+        "modality": "MRI",
+        "indications": [
+          "For the assessment of cardiac masses"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Steady-State Free Precession (SSFP) 2Ch, 3Ch, 4Ch, Short Axis Stack",
+          "TR/TE": "3.0/1.5 ms",
+          "Temporal": "30 phases/cardiac cycle"
+        },
+        "positioning": "Patient supine. ECG gating (vectorcardiogram 4 leads). Cardiac phased-array surface coil centered over precordium.",
+        "notes": "End-expiratory breath-holds (10–12 s per slice). SSFP cine calculates ejection fraction, end-diastolic/systolic volumes, and myocardial mass."
+      },
+      {
+        "id": "mri_cardiac_perf",
+        "name": "Cardiac Stress Perfusion MRI Protocols, Planning and Techniques",
+        "modality": "MRI",
+        "indications": [
+          "Ischemia assessment (Coronary artery disease)",
+          "Myocardial viability / Transmural scar extent",
+          "Cardiac amyloidosis / Sarcoidosis",
+          "Myocardial infarction dating"
+        ],
+        "contrast": "IV Gadolinium Chelate (0.1 mmol/kg @ 2 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Dynamic first-pass perfusion + Phase Sensitive Inversion Recovery (PSIR) LGE",
+          "Inversion Time (TI)": "280–360 ms (null myocardium)"
+        },
+        "positioning": "The semilunar valves are made up of three cusps each and serve the purpose of halting the blood from flowing back into the ventricles after a ventricular contraction. Positioned at the center of each valve is a fibrous nodule, and in the presence of increased back pressure, the cusps balloon outwards, causing their opposing surfaces to press together, effectively preventing any backflow.",
+        "notes": "Acquire LGE 10–15 minutes post-contrast. Subendocardial or transmural enhancement indicates ischemic CAD; mid-wall or subepicardial indicates non-ischemic cardiomyopathy."
+      },
+      {
+        "id": "mra_subclavian",
+        "name": "Magnetic Resonance Angiography(MRA) Subclavians",
+        "modality": "MRA",
+        "indications": [
+          "Thoracic aortic aneurysm / Coarctation",
+          "Subclavian steal syndrome",
+          "Aberrant right subclavian artery (Arteria lusoria)",
+          "Takayasu arteritis"
+        ],
+        "contrast": "IV Gadolinium Chelate (0.1 mmol/kg @ 2 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "ECG-gated 3D CE-MRA Navigator-echo",
+          "TR/TE": "3.2/1.3 ms",
+          "Voxel": "1.0 mm isotropic"
+        },
+        "positioning": "Plan the coronal slices on the sagittal plane; angle the positioning block parallel to the carotid arteries and veins (alternatively, make it parallel to the cervical spine). Check the positioning block in the other two planes. Provide an appropriate angle in the axial plane (parallel to the right and left shoulder joint). The slices must be sufficient to cover the subclavians from the anterior chest wall to the spinous process of the vertebrae. The Field of View (FOV) must be large enough to cover both shoulder joints. Phase oversampling and slice oversample must be used to avoid wrap-around artifacts. Instruct the patient to hold their breath during image acquisition (in our institution, we instruct patients to breathe in and out twice before the “breath in and hold” instruction). It is highly advisable to use Parallel Acquisition Technique to reduce the scan time (the scan time should be less than 16 seconds to get the best results).",
+        "notes": "ECG gating eliminates cardiac pulsation artifact at the aortic root and ascending aorta."
+      },
+      {
+        "id": "mri_breast",
+        "name": "MRI Breast Scan",
+        "modality": "MRI",
+        "indications": [
+          "With ZOOMit, radiologists and researchers can selectively image the volume of interest, achieve faster and higher-resolution imaging, enhance diagnostic confidence by detecting and evaluating smaller lesions in challenging areas, and broaden the scope of clinical MR imaging"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "High-resolution 3D T1 Dynamic (1 pre, 5 post @ 60s), T2 Dixon, Silicone-only",
+          "Temporal": "60–90 s/dynamic"
+        },
+        "positioning": "Plan the axial slices on the sagittal plane and align the position block parallel to the breast. Verify the positioning block in the other two planes. Ensure an appropriate angle is set in the coronal plane, parallel to the right and left nipples. The slices should be sufficient to cover the entire breast. To prevent wrap-around artifacts, oversampling of both the slice and phase should be applied.",
+        "notes": "Evaluate kinetic enhancement curves: Type 1 (persistent/benign), Type 2 (plateau/intermediate), Type 3 (washout/malignant). Lingual linguine sign confirms intracapsular rupture."
+      },
+      {
+        "id": "ctpa_pe",
+        "name": "CT Pulmonary Angiography (CTPA)",
+        "modality": "CTA",
+        "indications": [
+          "Suspected pulmonary embolism (PE)",
+          "Right ventricular strain (RV/LV ratio >1.0)",
+          "Unexplained hypoxemia / Dyspnea",
+          "Massive saddle embolism"
+        ],
+        "contrast": "50–60 mL high-iodine contrast (370 mgI/mL) @ 4.5–5.0 mL/s + 40 mL saline flush",
+        "technique": {
+          "kVp": "100",
+          "Pitch": "1.2",
+          "Coverage": "Lung bases to apices (caudocranial)",
+          "Trigger": "Main pulmonary trunk bolus tracking @ 100 HU"
+        },
+        "positioning": "Patient supine, arms raised above head to eliminate beam hardening artifact across chest.",
+        "notes": "Scan caudocranial (bottom-to-top) so breathing motion at end of breath-hold affects lung apices rather than bases where PE is most prevalent."
+      },
+      {
+        "id": "cta_aorta_dissection",
+        "name": "CTA Aorta Dissection & Triple Rule-Out",
+        "modality": "CTA",
+        "indications": [
+          "Acute aortic syndrome (Stanford Type A / B)",
+          "Aortic intramural hematoma (IMH)",
+          "Penetrating atherosclerotic ulcer (PAU)",
+          "Aortic rupture"
+        ],
+        "contrast": "80–100 mL iodinated contrast (dual-phase injection) @ 4.0 mL/s",
+        "technique": {
+          "ECG-gated": "Prospective trigger",
+          "Coverage": "Thoracic inlet through common femoral arteries",
+          "Slice": "0.625 mm"
+        },
+        "positioning": "Patient supine, arms raised. Rapid acquisition to trace true and false lumens down to femoral arteries.",
+        "notes": "Non-contrast chest CT must precede CTA to detect hyperdense crescent sign of acute intramural hematoma."
+      }
+    ]
+  },
+  "Abdomen": {
+    "title": "Abdomen, Pelvis & Visceral Vasculature Reference",
+    "content": "<p>Clinical reference for hepatobiliary, gastrointestinal, pancreatic, urological, and pelvic imaging. Includes multiphasic liver MRI with Primovist/Eovist, 3D MRCP, prostate mpMRI (PI-RADS), Crohn's MR enterography, and renal artery MRA.</p>",
+    "procedures": [
+      {
+        "id": "mri_liver",
+        "name": "Liver MRI",
+        "modality": "MRI",
+        "indications": [
+          "It is particularly effective in visualizing liver tissue and can detect and characterize focal liver lesions",
+          "Intravenous contrast can enhance the sensitivity and specificity of MRI scans for lesion detection and characterization, as well as differentiate between benign and malignant liver masses"
+        ],
+        "contrast": "IV Gadolinium Chelate (0.1 mmol/kg @ 2 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "3D T1 FS Dixon Dynamic, T2 FS, DWI (b=50, 400, 800), Hepatobiliary phase",
+          "DCE Phases": "Arterial (20s), Portal (70s), Transitional (3m), HBP (20m)"
+        },
+        "positioning": "Plan the axial slices on the coronal free-breathing localizer images and position the block horizontally across the liver, as shown. Verify the positioning in the other two planes. Establish an appropriate angle in the sagittal plane, aligning it horizontally across the liver. The slices must be sufficient to cover the entire liver from the diaphragm down to the C loop of the duodenum. The phase direction can either be right to left or anterior-posterior, as radial k-space sampling will eliminate potential motion artifacts. Use phase oversampling to prevent radial k-space-related artifacts.",
+        "notes": "In modern scanners, respiratory gating is achieved using phase scout navigators placed inside the liver tissues. In older-generation scanners, the liver dome respiratory trigger method can be utilized. However, in our department, we prefer using phase scout navigators. For respiratory-gated scans utilizing phase scout navigators, it is essential to accurately position the respiratory navigator box within the liver. Ensure that no part of the navigation box extends beyond the liver boundaries. Planning should be conducted using a free-breathing localizer, as the diaphragm’s downward movement during inhalation can result in improper slice planning and positioning of the respiratory navigator box."
+      },
+      {
+        "id": "mrcp",
+        "name": "MRCP Planning",
+        "modality": "MRI",
+        "indications": [
+          "Choledocholithiasis (CBD stones)",
+          "Malignant biliary obstruction (Klatskin tumor)",
+          "Primary sclerosing cholangitis (PSC)",
+          "Anatomical variant cystic duct insertion"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Heavy T2 3D respiratory-triggered thin slice + Thick-slab single shot HASTE",
+          "TE": "650–800 ms (heavy T2)"
+        },
+        "positioning": "Plan the coronal slices on the axial localizer and position the block horizontally across the liver as depicted. Verify the position in the other two planes. Establish an appropriate angle in the sagittal plane, aligning it vertically across the liver. Ensure that the slices adequately cover the entire liver, extending from the anterior abdominal wall to the erector spinae muscles. The phase direction should be from right to left to minimize ghosting artifacts from the lungs and heart. Employ phase oversampling to prevent wrap-around artifacts. Instruct the patient to hold their breath during image acquisition. (In our department, we typically advise patients to breathe in and out twice before providing the instruction to “breathe in and hold”.)",
+        "notes": "Plan the axial slices on the coronal breath hold images and position the block horizontally across the liver as shown. Verify the positioning in the other two planes. Establish an appropriate angle in the sagittal plane, aligning it horizontally across the liver. The slices must be sufficient to cover the entire liver from the diaphragm down to the C loop of the duodenum. The phase direction should be from right to left to minimize ghosting artifacts from the anterior abdominal wall. Use phase oversampling to prevent wrap-around artifacts. Instruct the patient to hold their breath during image acquisition. (In our department, we typically instruct patients to take two breaths in and out before providing the “breathe in and hold” instruction.)"
+      },
+      {
+        "id": "secretin_mrcp",
+        "name": "Secretin Stimulated MRCP Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "S-MRCP has established indications, including conditions like pancreas divisum, anomalous pancreaticobiliary junction, Santorinicele, Wirsungocele, chronic pancreatitis, main pancreatic duct stenosis, and assessment of complex postoperative anatomy",
+          "Interpretation of S-MRCP images involves assessing pancreatic duct morphology, anatomic variants, and cystic lesions communicating with the ducts"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Thick-slab HASTE acquired baseline, 1, 3, 5, 7, 10, 15 min post-secretin",
+          "Agent": "Human synthetic secretin 0.2 mcg/kg IV"
+        },
+        "positioning": "Plan the coronal slices using the axial localizer and position the block horizontally across the abdomen as shown. Verify the position in the other two planes. Establish an appropriate angle in the sagittal plane, aligning it vertically across the abdomen. Ensure that the slices adequately cover the entire pancreas, extending from the anterior abdominal wall to the vertebral body. The phase direction should be from right to left to minimize ghosting artifacts from the lungs and heart. Employ phase oversampling to prevent wrap-around artifacts. Additionally, consider adding saturation bands at the top and bottom of the block to minimize artifacts caused by fat signal, arterial pulsation, and breathing. Instruct the patient to hold their breath during image acquisition. (In our department, we typically advise patients to take two deep breaths before instructing them to “take a deep breath and hold”.)",
+        "notes": "Secretin stimulates exocrine pancreatic bicarbonate excretion. Normal duct dilates to >3 mm and fills duodenum by 10 mins."
+      },
+      {
+        "id": "mri_prostate",
+        "name": "MRI Prostate Planning",
+        "modality": "MRI",
+        "indications": [
+          "With ZOOMit, radiologists and radiographers can selectively image the volume of interest, achieve faster and higher-resolution imaging, enhance diagnostic confidence by detecting and evaluating smaller lesions in challenging areas, and broaden the scope of clinical MR imaging"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "High-res T2 (Axial/Sagittal/Coronal), High b-value DWI (b=1500–2000), DCE",
+          "Slice": "3.0 mm non-spaced",
+          "Matrix": "320×320"
+        },
+        "positioning": "Plan the sagittal slices on the axial plane, angling the positioning block parallel to the interpubic fibrocartilage and the anal canal. Check the positioning block in the other two planes, ensuring an appropriate angle is given in the coronal plane (parallel to the interpubic fibrocartilage). The slices must be sufficient to cover the entire pelvis from the right acetabulum to the left acetabulum. The field of view (FOV) must be large enough to encompass the prostate and seminal vesicles (typically 180mm-200mm). Additionally, to minimize artifacts arising from arterial pulsation, peristalsis, and breathing, consider incorporating saturation bands on the top and front of the sagittal block.",
+        "notes": "Peripheral zone lesions evaluated primarily on DWI/ADC (PI-RADS score); transition zone evaluated primarily on T2 morphology ('erased charcoal sign')."
+      },
+      {
+        "id": "mri_rectal_ca",
+        "name": "MRI rectal cancer protocols and planning",
+        "modality": "MRI",
+        "indications": [
+          "Rectal adenocarcinoma baseline staging",
+          "Mesorectal fascia (MRF) distance (<1 mm = positive)",
+          "Extramural venous invasion (EMVI)",
+          "Sphincter complex involvement"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Axial Oblique thin T2 (perpendicular to tumor long axis), Sagittal T2, DWI",
+          "Slice": "3.0 mm",
+          "FOV": "160 mm"
+        },
+        "positioning": "Plan the sagittal slices on the axial plane; angle the positioning block parallel to the interpubic fibrocartilage and the anal canal. Check the positioning block in the other two planes. Provide an appropriate angle in the coronal plane (parallel to the rectum and the anal canal). Ensure that the slices are sufficient to cover the entire pelvis from the right acetabulum to the left acetabulum. The field of view (FOV) must be large enough to encompass the entire pelvis (usually 270mm-300mm). To reduce artifacts caused by arterial pulsation and breathing, consider adding saturation bands on top and in front of the sagittal block.",
+        "notes": "Orthogonal planes relative to tumor axis essential. MRF involvement dictates neoadjuvant chemoradiotherapy eligibility."
+      },
+      {
+        "id": "mri_enterography",
+        "name": "Small bowel MRI (Enterography) Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "Crohn's disease terminal ileitis",
+          "Mural thickening & hyperenhancement",
+          "Fibrostenotic stricture vs active inflammatory",
+          "Enterocutaneous / Enteroenteric fistula"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Coronal T2 TrueFISP/FIESTA, Coronal T1 FS post-Gd, Cine peristalsis",
+          "Oral Prep": "1.5 L biphasic oral contrast (Mannitol / PEG / Sorbitol) over 45 min"
+        },
+        "positioning": "Plan the coronal slices on the axial image. Position the block horizontally across the abdomen as shown, and ensure that the positioning block is also checked in the other two planes. Establish an appropriate angle vertically across the abdomen in the sagittal plane. Make sure the slices adequately cover the entire abdomen, extending from the anterior abdominal wall to the erector spinae muscle. The field of view (FOV) should be large enough to encompass the abdomen and pelvis, ranging from the stomach to the pubic symphysis. To prevent wraparound artifacts, utilize phase oversampling. Instruct the patient to hold their breath during image acquisition. (In our department, we instruct the patients to breathe in and out twice before giving the “breathe in and hold” instruction.)",
+        "notes": "Biphasic contrast distends bowel lumen (dark T1, bright T2). Active Crohn's displays mucosal hyperenhancement and comb sign (engorged vasa recta)."
+      },
+      {
+        "id": "mra_renal",
+        "name": "MRI Renal Angiography (MRA kidneys)  and Indications",
+        "modality": "MRA",
+        "indications": [
+          "Renal artery stenosis (Atherosclerotic vs FMD)",
+          "Refractory hypertension",
+          "Live renal donor evaluation",
+          "Renal transplant vascular anastomoses"
+        ],
+        "contrast": "IV Gadolinium Chelate (0.1 mmol/kg @ 2 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Coronal 3D CE-MRA with fluoroscopic tracking",
+          "Voxel": "0.9 mm isotropic",
+          "TR/TE": "2.8/1.0 ms"
+        },
+        "positioning": "Plan the coronal slices on the axial plane; angle the positioning block horizontally across the right and left kidneys. Check the positioning block in the other two planes. An appropriate angle must be given in the sagittal plane (parallel to the abdominal aorta). Slices should be sufficient to cover both kidneys from anterior to posterior. Phase oversampling and slice oversampling should be used to avoid wrap-around artifacts. Instruct the patient to hold their breath during image acquisition. (In our department, we instruct the patients to breathe in and out twice before the “breathe in and hold” instruction.) It is highly advisable to use parallel acquisition technique to reduce the scan time (scan time should be less than 20 seconds to get the best results).",
+        "notes": "Visualizes accessory renal arteries, early branching, and fibromuscular dysplasia ('string of beads' sign)."
+      },
+      {
+        "id": "cta_abdominal_aorta",
+        "name": "CTA Abdominal Aorta & Visceral Run-Off",
+        "modality": "CTA",
+        "indications": [
+          "Abdominal aortic aneurysm (AAA) sizing & EVAR planning",
+          "Mesenteric ischemia (Celiac/SMA thrombosis)",
+          "Acute gastrointestinal bleeding",
+          "Renal vascular hypertension"
+        ],
+        "contrast": "80–100 mL non-ionic iodinated contrast @ 4.0–4.5 mL/s",
+        "technique": {
+          "Detector": "64-slice+",
+          "Slice": "0.625 mm",
+          "Coverage": "Diaphragm to common femoral bifurcation"
+        },
+        "positioning": "Patient supine, arms raised above head. Rapid acquisition in arterial phase.",
+        "notes": "Evaluate neck length, neck angulation, and iliac tortuosity for endovascular aortic repair (EVAR) device selection."
+      }
+    ]
+  },
+  "Spine": {
+    "title": "Spine & Spinal Cord Reference",
+    "content": "<p>Imaging protocols for cervical, thoracic, and lumbar spine. Comprehensive assessment of intervertebral disc herniation, neural foraminal stenosis, spinal cord compression, transverse myelitis, trauma, and post-operative spine.</p>",
+    "procedures": [
+      {
+        "id": "mri_c_spine",
+        "name": "Cervical Spine MRI protocols and planning",
+        "modality": "MRI",
+        "indications": [
+          "Cervical radiculopathy / Brachialgia",
+          "Cervical spondylotic myelopathy",
+          "Traumatic cord contusion",
+          "Multiple sclerosis cord plaque"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Sagittal T1, Sagittal T2, Sagittal STIR, Axial T2* Gradient/SPACE",
+          "Slice": "3.0 mm sagittal / 2.5 mm axial"
+        },
+        "positioning": "Plan the sagittal slices on the coronal plane; angle the positioning block parallel to the spinal cord. Check the positioning block in the other two planes. An appropriate angle must be given in the axial plane (parallel to the line along the center of the vertebral body through the length of the spinous process). Check the positioning block in the sagittal plane; the field of view (FOV) must be big enough to cover the entire cervical spine from the pons down to T3 (normally 260mm). The slices must be sufficient to cover the spine from the lateral border of the right transverse process to the lateral border of the left transverse process.",
+        "notes": "Axial slices angled parallel to each cervical disc space from C2-3 through C7-T1. Gradient echo T2* highlights uncovertebral osteophytes causing foraminal stenosis."
+      },
+      {
+        "id": "mri_l_spine",
+        "name": "Lumbar (lumbosacral) Spine MRI Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "Lumbago with radiculopathy (Sciatica)",
+          "Cauda equina syndrome (Saddle anesthesia)",
+          "Lumbar spinal canal stenosis / Neurogenic claudication",
+          "Vertebral discitis / Osteomyelitis"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Sagittal T1, Sagittal T2, Sagittal STIR, Axial T2 disc stacks (L3-S1)",
+          "Slice": "3.5 mm / 4.0 mm"
+        },
+        "positioning": "Plan the sagittal slices on the coronal plane and angle the position block parallel to the spinal cord. Check the positioning block in the other two planes, ensuring an appropriate angle is given in the axial plane (parallel to the center of the vertebral body and the spinous process). Verify the position block in the sagittal plane, ensuring the field of view (FOV) is big enough to cover the entire lumbar and sacral spine from T11 down to the coccyx (normally 350mm).",
+        "notes": "Classify disc contour: Bulge (>50% circumference), Protrusion (base wider than dome), Extrusion (dome wider than base), Sequestration (free disc fragment)."
+      },
+      {
+        "id": "mri_t_spine",
+        "name": "Thoracic spine MRI Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "Thoracic cord compression / Paraparesis",
+          "Thoracic disc herniation",
+          "Compression fracture (Osteoporotic vs Pathologic)",
+          "Epidural hematoma / Abscess"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Sagittal T1, Sagittal T2, Sagittal STIR, Axial T2",
+          "Slice": "3.5 mm",
+          "FOV": "350 mm"
+        },
+        "positioning": "Plan the sagittal slices on the coronal plane and angle the positioning block parallel to the spinal cord. Check the positioning block in the other two planes. An appropriate angle must be given in the axial plane, parallel to the line along the center of the vertebral body and the spinous process. Check the positioning block in the sagittal plane; the field of view (FOV) must be large enough to cover the entire thoracic and cervical spine from C1 down to T12 (normally 470 mm). The slices should be sufficient to cover the spine from the lateral border of the right (RT) transverse process up to the lateral border of the left (LT) transverse process. Place a saturation band over the chest in the sagittal plane, as shown in the diagram. This is done to avoid breathing artifacts over the spinal area. The phase direction should be head to feet to minimize further motion artifacts from the chest.",
+        "notes": "STIR sequence provides high sensitivity for acute vertebral trabecular microfractures and cord edema."
+      },
+      {
+        "id": "mri_cord",
+        "name": "spinal cord mri protocols, planning and indications",
+        "modality": "MRI",
+        "indications": [
+          "Chiari I malformation with Syringomyelia",
+          "Spinal dural arteriovenous fistula (SDAVF)",
+          "Transverse myelitis",
+          "Spinal cord tumor (Ependymoma, Astrocytoma)"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Sagittal 3D T2 SPACE whole cord, Axial CISS through syrinx",
+          "Slice": "1.0 mm isotropic"
+        },
+        "positioning": "Plan the sagittal slices on the coronal plane, angle the position block parallel to the spinal cord. Check the positioning block in the other two planes. An appropriate angle must be given in the axial plane on a tilted patient, this should be parallel to the imaginary line running through the centre of the vertebral body and spinous process. Check the position block in the sagittal plane where the FOV must be big enough to cover the whole cervical and thoracic spine from C1 down to T12. An FOV of 480mm should normally be sufficient. The slices should be enough to cover the spine from the lateral border of the right transverse process to the lateral border of left transverse process. A saturation band must be placed over the chest in the sagittal plane to avoid breathing artefacts over the spinal area. The phase direction should be head to foot to avoid further motion artefacts from the chest.",
+        "notes": "Flow-voids dorsal to cord rule out engorged serpentine perimedullary veins of SDAVF. Syrinx dimensions tracked longitudinally."
+      }
+    ]
+  },
+  "UpperLimb": {
+    "title": "Upper Extremity & Peripheral Vasculature Reference",
+    "content": "<p>Protocols for shoulder, elbow, wrist, hand, and upper extremity vasculature. Special emphasis on rotator cuff pathology, labral tears (SLAP/Bankart), TFCC complex, scaphoid AVN, and upper arm/hand angiography.</p>",
+    "procedures": [
+      {
+        "id": "mri_shoulder",
+        "name": "Shoulder MRI planning",
+        "modality": "MRI",
+        "indications": [
+          "Rotator cuff tear (Supraspinatus, Infraspinatus, Subscapularis)",
+          "Subacromial impingement / Bursitis",
+          "Long head of biceps tenosynovitis",
+          "Adhesive capsulitis (Frozen shoulder)"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Coronal Oblique T2 FS, Coronal Oblique T1, Sagittal Oblique T2, Axial T2 FS",
+          "Slice": "3.0 mm",
+          "Matrix": "288×256"
+        },
+        "positioning": "Plan the axial slices on the coronal plane and angle the positioning block perpendicular to the glenohumeral joint. Check the positioning block in the other two planes. Use an appropriate angle in the sagittal plane, perpendicular to the humeral head. The slices should be sufficient to cover the entire shoulder joint from the top of the acromioclavicular joint to two slices below the inferior glenohumeral ligament (articular capsule). Adding saturation bands over the chest will help reduce ghosting artifacts caused by breathing. The phase direction should be anteroposterior to avoid wrap-around and ghosting artifacts from the chest.",
+        "notes": "Coronal oblique plane angled parallel to supraspinatus tendon; sagittal oblique plane angled perpendicular to glenoid face."
+      },
+      {
+        "id": "mri_arthro_shoulder",
+        "name": "MRI shoulder arthrogram protocols and planning",
+        "modality": "MRI",
+        "indications": [
+          "Superior labrum anterior-posterior (SLAP) tear",
+          "Bankart lesion / Anterior shoulder dislocation",
+          "Humeral avulsion of glenohumeral ligament (HAGL)",
+          "Posterior labral tear (Reverse Bankart)"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "T1 FS Axial, Coronal Oblique, Sagittal, ABER view (Abduction External Rotation)",
+          "Contrast": "Dilute Intra-articular Gadolinium (1:200 saline)"
+        },
+        "positioning": "Positioning for injection: Appropriate positioning of the shoulder is one of the most important parts of an arthrogram. Position the patient in supine with the arm externally rotated (palm of the hand up) to avoid the long head of the biceps tendon. Immobilize the arm using sandbags over the palm.",
+        "notes": "ABER position elevates sensitivity for subtle anteroinferior labral detachments and articular-sided partial cuff tears."
+      },
+      {
+        "id": "mri_wrist",
+        "name": "Wrist MRI planning",
+        "modality": "MRI",
+        "indications": [
+          "Triangular fibrocartilage complex (TFCC) tear (Palmer classification)",
+          "Occult scaphoid fracture / Avascular necrosis",
+          "Carpal tunnel syndrome",
+          "Kienböck's disease (Lunate AVN)"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Coronal T2* Gradient, Coronal Proton Density FS, Axial T2 FS, Sagittal T1",
+          "Slice": "2.0 mm thin",
+          "Matrix": "320×288"
+        },
+        "positioning": "Plan the axial slices on the coronal plane; angle the positioning block horizontally across the wrist joint (i.e. across the carpal bones). Check the positioning block in the other two planes. An appropriate angle must be used in the sagittal plane (horizontally across the wrist joint). The slices should adequately cover the entire wrist area, from 1 inch above the carpo-metacarpal joint to 1 inch below the distal radioulnar joint. To mitigate vascular pulsation artifacts, employ saturation bands above and below the axial block.",
+        "notes": "High-resolution coronal PD FS evaluates TFCC articular disc perforation and radial/ulnar attachments."
+      },
+      {
+        "id": "mri_elbow",
+        "name": "Elbow MRI",
+        "modality": "MRI",
+        "indications": [
+          "Distal biceps tendon rupture",
+          "Ulnar collateral ligament (UCL) tear (Thrower's elbow)",
+          "Lateral epicondylitis (Tennis elbow)",
+          "Osteochondritis dissecans of capitellum"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "FABS view (Flexed Abducted Supinated), Axial T2 FS, Coronal PD FS",
+          "Slice": "2.5 mm"
+        },
+        "positioning": "Plan the axial slices on the coronal plane and angle the positioning block parallel to the medial and lateral humeral epicondyles. Check the positioning block in the other two planes. An appropriate angle must be used in the sagittal plane (perpendicular to the humerus and ulna). Slices must be sufficient to cover the whole elbow joint from 1 inch above the olecranon fossa to one inch below the radial tuberosity. Adding saturation bands on the top and bottom of the axial block will help reduce the arterial pulsation artifacts. The phase direction must be anteroposterior to avoid wrap-around and motion artifacts from the abdomen.",
+        "notes": "UCL tear demonstrates T2 hyperintensity and 'T-sign' with contrast extravasation at sublime tubercle."
+      },
+      {
+        "id": "mra_upper_arm",
+        "name": "magnetic resonance angiography(MRA) upper arm protocols and planning",
+        "modality": "MRA",
+        "indications": [
+          "Thoracic outlet arterial compression",
+          "Brachial / Radial artery trauma / Pseudoaneurysm",
+          "Hemodialysis AV fistula mapping / Steal syndrome"
+        ],
+        "contrast": "IV Gadolinium Chelate (0.1 mmol/kg @ 2 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "3D CE-MRA Subclavian-to-Palmar run-off",
+          "Voxel": "0.8 mm isotropic"
+        },
+        "positioning": "Plan the axial slices on the coronal plane and angle the positioning block perpendicular to the humerus. Check the positioning block in the other two planes. An appropriate angle must be used in the sagittal plane (perpendicular to the humerus). Slices must be sufficient to cover the whole upper arm, from the acromioclavicular joint to the elbow joint. Adding a saturation band over the chest will help reduce breathing artifacts. The phase direction must be anteroposterior to avoid wrap-around and motion artifacts from the chest.",
+        "notes": "Demonstrates patent radial and ulnar arteries supplying deep and superficial palmar arches before radial artery harvest."
+      }
+    ]
+  },
+  "LowerLimb": {
+    "title": "Lower Extremity, Joints & Peripheral Run-Off Reference",
+    "content": "<p>Protocols for hip, knee, ankle, foot, and lower extremity peripheral run-off. Encompasses cruciate ligaments, menisci, cartilage mapping, hip labrum, avascular necrosis, ankle tendons, and stepped peripheral CTA/MRA run-off.</p>",
+    "procedures": [
+      {
+        "id": "mri_knee",
+        "name": "MRI Knee",
+        "modality": "MRI",
+        "indications": [
+          "Anterior cruciate ligament (ACL) tear",
+          "Medial / Lateral meniscal tear (Bucket handle, Root tear)",
+          "Posterior cruciate ligament (PCL) / Posterolateral corner (PLC)",
+          "Osteochondral defect"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Sagittal PD FS, Sagittal T1, Coronal PD FS, Axial T2 FS",
+          "Slice": "3.0 mm",
+          "Matrix": "320×320"
+        },
+        "positioning": "Patient supine, knee in 10–15° external rotation in dedicated 16-channel knee transmit/receive coil.",
+        "notes": "Sagittal plane angled parallel to ACL in intercondylar notch. Meniscal tear diagnosed when intrameniscal hyperintensity contacts superior or inferior articular surface on &ge;2 contiguous slices ('two-slice touch rule')."
+      },
+      {
+        "id": "mri_hips",
+        "name": "MRI Hips",
+        "modality": "MRI",
+        "indications": [
+          "Avascular necrosis of femoral head (AVN / Perthes)",
+          "Femoroacetabular impingement (FAI - Cam / Pincer)",
+          "Occult femoral neck fracture",
+          "Trochanteric pain syndrome"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Coronal T1, Coronal STIR, Axial Oblique PD FS parallel to femoral neck",
+          "Slice": "3.5 mm"
+        },
+        "positioning": "Plan the coronal slices on the axial plane; angle the positioning block parallel to the RT and LT femoral heads. Check the positioning block in the other two planes. An appropriate angle must be given in the sagittal plane (parallel to the femur). The slices should adequately encompass the hip joints, starting from the ischial tuberosities and extending up to the line of pubic symphysis. To minimize ghosting artifacts caused by peristalsis and breathing, consider using a saturation band over the coronal block.",
+        "notes": "AVN presents with characteristic 'double-line sign' on T2-weighted sequences (inner hyperintense granulation tissue, outer hypointense sclerotic rim)."
+      },
+      {
+        "id": "mri_ankle",
+        "name": "Ankle MRI",
+        "modality": "MRI",
+        "indications": [
+          "Anterior talofibular ligament (ATFL) / Calcaneofibular ligament (CFL) tear",
+          "Achilles tendon rupture / Tendinopathy",
+          "Posterior tibial tendon dysfunction",
+          "Osteochondral lesion of talar dome"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Axial PD FS, Coronal PD FS, Sagittal T1, Sagittal T2 FS",
+          "Slice": "3.0 mm",
+          "FOV": "140 mm"
+        },
+        "positioning": "Plan the axial slices on the coronal plane and angle the positioning block parallel to the tibio-talar joint. Check the positioning block in the other two planes. An appropriate angle must be given in the sagittal plane, parallel to the tibio-talar joint. The slices should be sufficient to cover the ankle joint from 2 inches above the tibio-talar joint down to the plantar aspect of the foot.",
+        "notes": "Axial oblique plane angled 20° downward along ATFL provides definitive evaluation of anterior ankle instability."
+      },
+      {
+        "id": "mri_foot",
+        "name": "Foot MRI",
+        "modality": "MRI",
+        "indications": [
+          "Morton's neuroma (Intermetatarsal space)",
+          "Plantar fasciitis / Plantar fibromatosis",
+          "Lisfranc ligamentous complex injury",
+          "Diabetic charcot foot / Osteomyelitis"
+        ],
+        "contrast": "Non-contrast (flow-dependent)",
+        "technique": {
+          "Sequences": "Short Axis T1, Short Axis T2 FS, Long Axis PD FS",
+          "Slice": "2.5 mm",
+          "Matrix": "288×256"
+        },
+        "positioning": "Plan the axial slices on the sagittal plane, angling the positioning block perpendicular to the metatarsal and phalanges bones. Check the positioning block in the other two planes. An appropriate angle must be given in the coronal plane (perpendicular to the metatarsal and phalanges bones). The slices must be sufficient to cover the foot from the tip of the toe up to the tarsal bones.",
+        "notes": "Morton's neuroma presents as dumbbell-shaped hypointense mass on T1/T2 in the 3rd intermetatarsal space with Mulder click on palpation."
+      },
+      {
+        "id": "mra_legs",
+        "name": "MRA Legs (Peripheral MRA)",
+        "modality": "MRA",
+        "indications": [
+          "Critical limb-threatening ischemia (CLTI)",
+          "Peripheral arterial disease (Fontaine / Rutherford stage)",
+          "Popliteal artery entrapment / Cystic adventitial disease",
+          "Bypass graft surveillance"
+        ],
+        "contrast": "IV Gadolinium Chelate (0.1 mmol/kg @ 2 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "3-Station Stepped Bolus Chase 3D CE-MRA (Pelvis, Thigh, Calf)",
+          "Voxel": "1.0×1.0×1.2 mm",
+          "Contrast": "Dual-rate Gd injection"
+        },
+        "positioning": "Plan the coronal slices on the sagittal Phase contrast vessel localiser; angle the position block parallel to the aorta. Check the positioning block in the other two planes. An appropriate angle must be used in the axial plane (parallel to the long axia of both kidneys). Slices must be sufficient to cover the aorta and iliac arteries. The FOV must be big enough to cover the vessels  from the heart to femoral arteries. Enough phase oversampling and slice oversample must be used to avoid wrap- around artifacts. Instruct the patient to hold their breath during image acquisition. (In our department we instruct the patients to breathe in and out twice before the ‘breath in and hold’ instruction). It is highly advisable to use Parallel acquisition technique to reduce the scan time (scan time should be less than 20 seconds to get the best results). Protocol should be setup with an auto move of the table after the abdominal 3D flash acquisition.",
+        "notes": "Rapid table translation chases bolus from aorta to calf. Flow-sensitizing prep suppresses venous return in calf."
+      },
+      {
+        "id": "cta_runoff_lower",
+        "name": "CTA Lower Extremity Run-Off",
+        "modality": "CTA",
+        "indications": [
+          "Peripheral arterial occlusive disease (Claudication vs rest pain)",
+          "Acute lower extremity arterial thromboembolism",
+          "Femoropopliteal stent occlusion",
+          "Diabetic foot arterial mapping"
+        ],
+        "contrast": "120–130 mL iodinated contrast @ 4.0 mL/s (biphasic) + 50 mL saline flush",
+        "technique": {
+          "Coverage": "Abdominal aorta at L1 through toes",
+          "Pitch": "0.9",
+          "Detector": "64-slice+",
+          "Slice": "0.625 mm"
+        },
+        "positioning": "Patient supine, feet taped together in slight internal rotation. Scan direction craniocaudal tracking contrast wavefront.",
+        "notes": "Generates complete run-off angiogram showing inflow (aortoiliac), outflow (femoropopliteal), and run-off (anterior tibial, posterior tibial, peroneal to dorsalis pedis and plantar arch)."
+      }
+    ]
+  }
+}

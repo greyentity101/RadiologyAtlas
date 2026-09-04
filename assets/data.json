@@ -1,0 +1,1655 @@
+{
+  "Head": {
+    "title": "Head & Neuro Radiology Reference",
+    "content": "<p>Authoritative neuroimaging reference across Non-Contrast CT (ASPECTS scoring, acute hemorrhage, trauma), CT Angiography (Circle of Willis, carotids, aneurysm, dissection), high-resolution Skull Radiography (Townes, Waters, Caldwell views), and volumetric MRI protocols.</p><details><summary>ASPECTS Stroke Scoring & CT Windowing</summary><div class='details-content'><p>The Alberta Stroke Program Early CT Score (ASPECTS) is a 10-point quantitative topographic CT assessment for MCA acute ischemic stroke. Windowing for acute ischemia requires narrow brain window (W: 30–40, L: 30–35) to accentuate subtle gray-white junction dedifferentiation.</p></div></details><details><summary>Circle of Willis & TOF-MRA Physics</summary><div class='details-content'><p>Flow-related enhancement exploits unsaturated, fully magnetized spins entering the 3D imaging slab. Complete vascular assessment must include the anterior communicating (ACom), bilateral A1/A2, posterior communicating (PCom), basilar bifurcation, and bilateral MCA M1/M2 branches.</p></div></details>",
+    "procedures": [
+      {
+        "id": "ct_head_ncct",
+        "name": "Non-Contrast Head CT (Acute Stroke / Trauma / ICH)",
+        "modality": "CT",
+        "indications": [
+          "Acute ischemic stroke triage within 4.5h window (ASPECTS score)",
+          "Traumatic brain injury (epidural, subdural, subarachnoid hemorrhage)",
+          "Spontaneous intracerebral hemorrhage (ICH) and intraventricular extension",
+          "Thunderclap headache (subarachnoid hemorrhage rule-out)",
+          "Elevated intracranial pressure, midline shift, and brain herniation"
+        ],
+        "contrast": "None (unenhanced NCCT prevents pseudo-subarachnoid hyperdensity)",
+        "technique": {
+          "kVp / mAs": "120 kVp, 280–320 mAs (AEC modulated)",
+          "Slice / Interval": "0.625 mm raw acquisition, reformatted at 4.0 mm contiguous",
+          "Brain Window": "WW: 80, WL: 40 HU",
+          "Subdural Window": "WW: 130–300, WL: 50–100 HU",
+          "Bone Window": "WW: 2000–3000, WL: 400–700 HU",
+          "Scan Range": "Foramen magnum to cranial vertex"
+        },
+        "positioning": "Patient supine, head immobilized in dedicated head holder. Chin tucked so baseline (orbitomeatal line) is parallel to gantry plane to minimize eye lens radiation.",
+        "notes": "Hyperdense MCA sign indicates acute thromboembolism. Look for loss of insular ribbon, lentiform obscuration, and sulcal effacement."
+      },
+      {
+        "id": "cta_head_neck",
+        "name": "CT Angiography (CTA) Head & Neck",
+        "modality": "CTA",
+        "indications": [
+          "Acute stroke large vessel occlusion (LVO) detection for endovascular thrombectomy",
+          "Intracranial saccular and fusiform aneurysms",
+          "Carotid and vertebral artery dissection (intimal flap, intramural hematoma)",
+          "Arteriovenous malformations (AVM) and dural AV fistulas",
+          "Internal carotid artery (ICA) stenosis quantification (NASCET criteria)"
+        ],
+        "contrast": "60–80 mL non-ionic iodinated contrast (350–370 mg I/mL) @ 4.5–5.0 mL/s + 40 mL saline flush",
+        "technique": {
+          "kVp / mAs": "100–120 kVp, auto mAs",
+          "Detector Slice": "0.625 mm sub-millimeter volume",
+          "Triggering": "Bolus tracking on aortic arch (100 HU trigger threshold) or automated smart prep",
+          "Scan Coverage": "Aortic arch through Circle of Willis to vertex",
+          "Reconstructions": "0.625 mm axial, coronal/sagittal MIP (15–20 mm slab), 3D VR"
+        },
+        "positioning": "Patient supine, head straight in head holder, shoulders pulled down slightly. Arms resting comfortably at sides.",
+        "notes": "Multiphasic CTA (arterial, peak venous, late venous) provides robust collateral flow grading in acute ischemic stroke."
+      },
+      {
+        "id": "xr_skull",
+        "name": "Skull Radiography (AP, Lateral, Towne's View)",
+        "modality": "X-RAY",
+        "indications": [
+          "Calvarial fracture evaluation, linear and depressed skull fractures",
+          "Multiple myeloma (punched-out lytic 'raindrop' skull lesions)",
+          "Paget disease of bone (cotton wool appearance)",
+          "Post-operative craniotomy flap and burr hole alignment",
+          "Foreign body localization and gunshot projectile assessment"
+        ],
+        "contrast": "None (radiographic osseous survey)",
+        "technique": {
+          "kVp / mAs": "75–85 kVp, 16–25 mAs (with anti-scatter grid)",
+          "SID": "100 cm (40 inches)",
+          "Grid": "Grid cassette (ratio 10:1 or 12:1)",
+          "Focal Spot": "Small focal spot (0.6 mm) for high spatial bone detail",
+          "Projections": "AP Axial (Towne's 30° caudad to OML), Lateral (CR 5cm above EAM)"
+        },
+        "positioning": "Towne's view: Patient supine or erect, chin tucked to align orbitomeatal line (OML) perpendicular to IR. Angle CR 30° caudad through foramen magnum. Lateral: Head in true lateral, inter-pupillary line perpendicular to IR.",
+        "notes": "Towne's view projects the dorsum sellae and posterior clinoid processes within the shadow of the foramen magnum."
+      },
+      {
+        "id": "xr_paranasal_sinuses",
+        "name": "Paranasal Sinuses & Facial Bones (Water's & Caldwell)",
+        "modality": "X-RAY",
+        "indications": [
+          "Acute rhinosinusitis (air-fluid levels, mucosal thickening)",
+          "Tripod (zygomaticomaxillary complex) fracture",
+          "Orbital blowout fracture with maxillary sinus herniation",
+          "Nasal bone fracture with septal deviation"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "75–80 kVp, 12–18 mAs",
+          "SID": "100 cm",
+          "Grid": "Yes (8:1 or 10:1)",
+          "Projections": "Parietoacanthial (Water's view), PA Axial (Caldwell view 15° caudad)"
+        },
+        "positioning": "Erect posture MANDATORY to demonstrate horizontal air-fluid levels. Water's: Chin resting on bucky, nose 1 cm away, orbitomeatal line at 37° to IR plane. Central ray exits at acanthion.",
+        "notes": "Always inspect the orbital floor and teardrop soft-tissue density hanging into the maxillary antrum in blowout fractures."
+      },
+      {
+        "id": "mra_brain",
+        "name": "Brain MRA",
+        "modality": "MRA",
+        "indications": [
+          "localize_3plane",
+          "T2_tse_tra.",
+          "TOF_3D_AXI_MULTI-SLAB."
+        ],
+        "contrast": "IV Gadolinium chelate (0.1 mmol/kg @ 1.5–2.0 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Head Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually less than 25 seconds and are T1-weighted low-resolution scans.",
+        "notes": "MRA stands for magnetic resonance angiography. MRA of the brain is used to assess abnormalities in the arterial blood supply system of the brain. The most frequently employed method for assessing the brain’s arterial blood supply system is the three-dimensional (3D) time-of-flight (TOF) MRA. This te"
+      },
+      {
+        "id": "mri_brain_routine",
+        "name": "Pediatric Brain MRI Planning",
+        "modality": "MRI",
+        "indications": [
+          "localize_3plane",
+          "PD+T2_AXIAL_3MM_SFOV",
+          "T1_TSE_AXIAL_3MM_SFOV",
+          "T2_FLAIR_CORONAL_3MM_SFOV",
+          "T1_TSE_SAGITTAL_3MM_SFOV",
+          "EPI_DWI_AXIAL_3MM_SFOV"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Head Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually less than 25 seconds and are T1-weighted low-resolution scans.",
+        "notes": "Plan the axial slices on the sagittal plane and position the block parallel to the genu and splenium of the corpus callosum. Verify the planning block in the other two planes and ensure that an appropriate angle is maintained in the coronal plane, making it perpendicular to the line of the midline o"
+      },
+      {
+        "id": "mri_orbits",
+        "name": "MRI Orbits Planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T2_tse_tra.",
+          "T2_STIR_CORONAL",
+          "T1_TSE_CORONAL",
+          "T2_TSE_Sagittal_Oblique_RT",
+          "T2_TSE_Sagittal_Oblique_LT"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Head Phased Array Coil"
+        },
+        "positioning": "A three plane localiser must be taken in the beginning to localise and plan the sequences. Localisers are normally less than 25sec. T1 weighted low resolution scans.",
+        "notes": "A three plane localiser must be taken in the beginning to localise and plan the sequences. Localisers are normally less than 25sec. T1 weighted low resolution scans."
+      },
+      {
+        "id": "mri_trigeminal",
+        "name": "Trigeminal Nerve(CN V) MRI Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane.",
+          "T2_STIR_CORONAL_3MM_SFOV",
+          "T1_TSE_CORONAL_3MM_SFOV",
+          "T2_SPACE 3D_AXIAL_.9MM",
+          "T1_TSE_AXIAL_3MM_SFOV",
+          "Contrast enchancement"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Head Phased Array Coil"
+        },
+        "positioning": "To plan the sequences, it is necessary to acquire a three-plane localizer, which typically consists of T1 weighted low-resolution scans lasting less than 25 seconds.",
+        "notes": "The trigeminal nerve is one of the 12 cranial nerves and is responsible for transmitting sensory information from the face to the brain. It is the largest cranial nerve and has both sensory and motor functions. The trigeminal nerve is divided into three main branches: the ophthalmic nerve (V1), the "
+      },
+      {
+        "id": "mri_iam",
+        "name": "Internal Auditory Meatus(IAMS) MRI",
+        "modality": "MRI",
+        "indications": [
+          "localize_3plane",
+          "T2_tse_tra.",
+          "T2_TSE_Coronal_3MM",
+          "T2_CISS 3D_Axial",
+          "T1-Tse-Axil-3MM Pre Contrast",
+          "T1_Tse_Coronal_3mm Pre Contrast"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Head Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually less than 25 seconds and are T1-weighted low-resolution scans.",
+        "notes": "Plan the axial slices on the sagittal plane and position the block parallel to the genu and splenium of the corpus callosum. Verify the planning block in the other two planes and ensure that an appropriate angle is maintained in the coronal plane, making it perpendicular to the line of the midline o"
+      },
+      {
+        "id": "mri_epilepsy",
+        "name": "MRI Brain Epilepsy Protocol and Planning",
+        "modality": "MRI",
+        "indications": [
+          "localize_3plane",
+          "T2_tse_tra.",
+          "T2_flair_tra.",
+          "T2_tse_sag.",
+          "T2_TSE_CORONAL_OBLIQUE_2MM",
+          "T1_TSE_CORONAL_OBLIQUE_2MM"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Head Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually less than 25 seconds and are T1-weighted low-resolution scans.",
+        "notes": "Plan the axial slices on the sagittal plane and position the block parallel to the genu and splenium of the corpus callosum. Verify the planning block in the other two planes and ensure that an appropriate angle is maintained in the coronal plane, making it perpendicular to the line of the midline o"
+      },
+      {
+        "id": "mri_ms",
+        "name": "Multiple sclerosis (MS)",
+        "modality": "MRI",
+        "indications": [
+          "localize_3plane",
+          "T2_tse_tra 3mm",
+          "T2_flair_tra 3mm",
+          "T1_axial_3mm",
+          "Flair_sagittal_3mm",
+          "Dwi_epi3trace_tra"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Head Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually less than 25 seconds and are T1-weighted low-resolution scans.",
+        "notes": "Multiple sclerosis (MS) is a chronic and potentially disabling neurological disorder that affects the central nervous system (CNS), primarily the brain and spinal cord. It is characterized by the immune system mistakenly attacking the protective covering of nerve fibers, known as myelin, causing inf"
+      },
+      {
+        "id": "mri_tmj",
+        "name": "Temporomandibular Joints (TMJ'S) MRI Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane.",
+          "T2_tse_tra.",
+          "LOCLIZER_2_PLANE",
+          "PD_SE_CORONAL_SFOV_LT",
+          "PD_SE_CORONAL_SFOV_RT",
+          "PD_SE_SAGITTAL_SFOV_RT CLOSE"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Head Phased Array Coil"
+        },
+        "positioning": "To plan the sequences, it is essential to acquire a three-plane localizer. These localizers typically have a duration of less than 25 seconds and are T1-weighted with low resolution.",
+        "notes": "Magnetic resonance imaging (MRI) is the most valuable and extensively utilized imaging technique for assessing the temporomandibular joint (TMJ). In comparison to computed tomography (CT) and arthrography, MRI offers superior tissue contrast, enabling clear visualization of soft tissues and other ar"
+      }
+    ]
+  },
+  "Neck": {
+    "title": "Cervical Spine & Neck Radiology Reference",
+    "content": "<p>Multimodality diagnostic protocols for cervical soft tissues, airway patency, cervical adenopathy, thyroid nodules, carotid bifurcation stenosis, and cervical spine osteoligamentous integrity.</p><details><summary>Carotid Stenosis Criteria (NASCET)</summary><div class='details-content'><p>Calculated as: % Stenosis = (1 - [narrowest lumen / normal distal ICA lumen]) x 100%. Severe stenosis (&ge;70%) carries critical thromboembolic stroke risk and benefits from carotid endarterectomy or stenting.</p></div></details>",
+    "procedures": [
+      {
+        "id": "ct_neck_soft",
+        "name": "Contrast-Enhanced Soft Tissue Neck CT",
+        "modality": "CT",
+        "indications": [
+          "Deep neck space infection (retropharyngeal, peritonsillar, Ludwig angina)",
+          "Head and neck squamous cell carcinoma (staging of primary and nodal metastases)",
+          "Thyroid mass, substernal goiter, and parathyroid adenoma localization",
+          "Vocal cord paralysis, laryngeal trauma, and pyriform sinus lesions",
+          "Branchial cleft cyst, thyroglossal duct cyst, and salivary gland tumors"
+        ],
+        "contrast": "75–100 mL non-ionic iodinated contrast (300–350 mg I/mL) @ 2.5–3.0 mL/s, scan delay 65–70 seconds",
+        "technique": {
+          "kVp / mAs": "120 kVp, 200–250 mAs (AEC)",
+          "Slice": "0.625 mm acquisition, reconstructed 2.0 mm contiguous axial, coronal, sagittal",
+          "Soft Window": "WW: 350, WL: 50 HU",
+          "Bone Window": "WW: 2000, WL: 400 HU",
+          "Coverage": "Skull base to aortic arch (carotid bifurcation to mediastinum)"
+        },
+        "positioning": "Patient supine, head extended slightly. Instruct patient to swallow saliva BEFORE scan start, then maintain quiet breathing with ZERO swallowing during beam sweep.",
+        "notes": "Valsalva maneuver or phonating 'eeeee' may be added for dedicated piriform sinus and vocal cord mucosal distension."
+      },
+      {
+        "id": "xr_cspine",
+        "name": "Cervical Spine Radiography (AP, Lateral, Open-Mouth Odontoid)",
+        "modality": "X-RAY",
+        "indications": [
+          "Trauma cervical spine clearance (Canadian C-Spine / NEXUS criteria)",
+          "Cervical spondylosis, neural foraminal stenosis, and disc height loss",
+          "Odontoid fracture (Type I, II, III) and atlantoaxial subluxation",
+          "Whiplash hyperextension/flexion sprain",
+          "Rheumatoid arthritis C1-C2 pannus and retro-odontoid instability"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "Lateral: 75–80 kVp, 20–32 mAs; AP: 70–75 kVp, 10–14 mAs; Open-mouth: 70 kVp, 8–12 mAs",
+          "SID": "180 cm (72 inches) for lateral to reduce magnification; 100 cm for AP/Odontoid",
+          "Grid": "Yes (10:1 or 12:1)",
+          "Landmarks": "C1 to C7-T1 junction must be completely visible"
+        },
+        "positioning": "Lateral: Patient erect, shoulders depressed (weights in hands if needed to expose C7-T1). Open-mouth: Mouth wide open, line from lower edge of upper incisors to mastoid tip perpendicular to IR, patient phonating 'ah' to depress tongue.",
+        "notes": "Verify the 4 parallel lines on lateral: anterior vertebral line, posterior vertebral line, spinolaminar line, and spinous process line."
+      },
+      {
+        "id": "xr_soft_neck",
+        "name": "Soft Tissue Lateral Neck (Airway & Retropharyngeal Space)",
+        "modality": "X-RAY",
+        "indications": [
+          "Acute epiglottitis ('thumbprint' sign)",
+          "Croup / Laryngotracheobronchitis ('steeple' sign on AP)",
+          "Retropharyngeal abscess (pathological widening of prevertebral soft tissue)",
+          "Foreign body ingestion (fish bone, coin, battery) in hypopharynx/cervical esophagus"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "65–70 kVp (lower kVp enhances soft tissue contrast), 8–12 mAs",
+          "SID": "180 cm",
+          "Grid": "Yes",
+          "Exposure": "During deep inspiration with neck slightly extended"
+        },
+        "positioning": "Patient standing or seated in true lateral. Arms behind back to prevent shoulder superimposition over lower neck and thoracic inlet.",
+        "notes": "Normal retropharyngeal width: C2-C3 < 7 mm (or < 1/3 vertebral width); C6-C7 < 14 mm in children, < 22 mm in adults."
+      },
+      {
+        "id": "mra_neck",
+        "name": "Magnetic Resonance Angiography( MRA) Neck Dissection",
+        "modality": "MRA",
+        "indications": [
+          "localize_3plane",
+          "PC_2D_SAGITTAL_LOC",
+          "3D_TOF_MULTI SLAB_AXIAL_1MM",
+          "T1_TSE_DIXON_AXIAL_3MM"
+        ],
+        "contrast": "IV Gadolinium chelate (0.1 mmol/kg @ 1.5–2.0 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Neck Phased Array Coil"
+        },
+        "positioning": "A three plane localiser must be taken in the beginning to localise and plan the sequences. Localisers are normally less than 25sec. T1 weighted low resolution scans.",
+        "notes": "Plan the sagittal slices on the coronal localizer: angle the positioning block parallel to the cervical spine. Check the positioning block in the other two planes. An appropriate angle must be given in the axial plane (parallel to the midline of the brain). Slices must be sufficient to cover the nec"
+      },
+      {
+        "id": "mri_soft_neck",
+        "name": "MRI soft tissue neck planning and protocols",
+        "modality": "MRI",
+        "indications": [
+          "localize_3plane",
+          "T2_STIR_CORONAL",
+          "T1_TSE_CORONAL",
+          "T2_STIR_AXIAL",
+          "T1_TSE_AXIAL",
+          "T2_TSE_SAGITTAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Neck Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are normally less than 25 seconds and are T1-weighted low-resolution scans.",
+        "notes": "Plan the coronal slices on the sagittal plane, and angle the planning block parallel to the cervical spine. Check the planning block in the other two planes. An appropriate angle must be given in the axial plane (perpendicular to the nasal septum). The slices must be sufficient to cover the soft tis"
+      },
+      {
+        "id": "mri_b_plexus",
+        "name": "Brachial Plexus MRI Protocols, Planning and Indications",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_STIR_CORONAL",
+          "T1_TSE_CORONAL",
+          "T2_STIR_AXIAL",
+          "T1_TSE_AXIAL",
+          "T2_TSE_SAGITTAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Neck Phased Array Coil"
+        },
+        "positioning": "Patient positioned comfortably supine on table. Centered with laser crosshair over neck region. Immobilize with foam pads.",
+        "notes": "The brachial plexus is a network of nerves originating from the spinal cord in the neck region (C5-T1) and branching out to provide motor and sensory innervation to the upper extremities. It consists of five main branches, which are responsible for controlling movement and sensation in the shoulder,"
+      }
+    ]
+  },
+  "Chest": {
+    "title": "Thorax & Cardiovascular Radiology Reference",
+    "content": "<p>Exhaustive thoracic imaging protocols covering Chest Radiography (PA, Lateral, Lordotic), High-Resolution CT (HRCT) for interstitial lung diseases, CT Pulmonary Angiography (CTPA) for pulmonary embolism, Aortic dissection CTA, and Cardiac MRI.</p><details><summary>PE Triage & CTPA Injection Dynamics</summary><div class='details-content'><p>Pulmonary arterial opacification requires high flow rates (&ge;4.0 mL/s) with bolus tracking ROI placed on the main pulmonary artery trunk. Threshold trigger set to 100 HU with automated shallow inspiration breathing to avoid the transient interruption of contrast (TIC) effect from IVC unopacified blood rush.</p></div></details>",
+    "procedures": [
+      {
+        "id": "ct_hrct_chest",
+        "name": "High-Resolution CT (HRCT) Chest",
+        "modality": "CT",
+        "indications": [
+          "Idiopathic Pulmonary Fibrosis (IPF / UIP pattern: honeycombing, traction bronchiectasis)",
+          "Non-Specific Interstitial Pneumonia (NSIP: subpleural ground-glass opacities)",
+          "Sarcoidosis (perilymphatic micronodules, bronchovascular cuffing)",
+          "Cystic lung diseases (LAM, LCH, Birt-Hogg-Dube)",
+          "Bronchiectasis, small airway bronchiolitis, and air trapping (mosaic attenuation)"
+        ],
+        "contrast": "None (non-contrast ensures pristine assessment of lung parenchyma)",
+        "technique": {
+          "kVp / mAs": "120 kVp, 100–150 mAs (thin-slice low-dose protocol)",
+          "Slice Thickness": "0.625–1.0 mm reconstructed with sharp high-spatial frequency lung kernel",
+          "Spacing": "Contiguous volumetric helical acquisition or 10 mm spaced axial HRCT",
+          "Expiratory Phase": "Add 3–5 low-dose expiratory slices to confirm air trapping",
+          "Prone Scans": "Prone positioning if needed to clear dependent atelectasis",
+          "Lung Window": "WW: 1500, WL: -600 HU",
+          "Mediastinal Window": "WW: 350, WL: 40 HU"
+        },
+        "positioning": "Patient supine, arms fully elevated above head. Suspended end-inspiration on second full breath-hold.",
+        "notes": "Honeycombing is defined as clustered subpleural cystic spaces (3–10 mm) with shared thick walls in multiple layers."
+      },
+      {
+        "id": "ct_pe_ctpa",
+        "name": "CT Pulmonary Angiography (CTPA - Pulmonary Embolism)",
+        "modality": "CTA",
+        "indications": [
+          "Acute pulmonary embolism (PE) rule-out with elevated D-dimer or high Wells score",
+          "Saddle embolus causing acute right ventricular strain",
+          "Chronic thromboembolic pulmonary hypertension (CTEPH)",
+          "Pulmonary artery aneurysm or arteriovenous fistula (PAVM)"
+        ],
+        "contrast": "60–75 mL high-concentration iodinated contrast (350–370 mg I/mL) @ 4.0–5.0 mL/s via 18G/20G antecubital IV + 40 mL saline chaser",
+        "technique": {
+          "kVp / mAs": "100 kVp (increases iodine k-edge photoelectric absorption) / auto mAs",
+          "Slice": "0.625 mm sub-millimeter volume",
+          "Bolus Tracking": "ROI on main pulmonary artery trunk, trigger threshold 100–120 HU",
+          "Scan Direction": "Caudocranial (feet-to-head) to minimize respiratory motion at diaphragmatic bases",
+          "Vessel Window": "WW: 700, WL: 100 HU",
+          "Soft Tissue Window": "WW: 400, WL: 40 HU"
+        },
+        "positioning": "Supine, arms overhead. Instruction: 'Take a gentle breath in and hold your breath'. Avoid deep Valsalva which causes transient dilution of contrast.",
+        "notes": "Assess right ventricle to left ventricle (RV/LV) diameter ratio in axial view: RV/LV > 1.0 indicates significant RV strain/submassive PE."
+      },
+      {
+        "id": "cta_aorta_chest",
+        "name": "CTA Thoracic Aorta (Dissection / Aneurysm Protocol)",
+        "modality": "CTA",
+        "indications": [
+          "Acute aortic syndrome: Stanford Type A vs Type B aortic dissection",
+          "Intramural hematoma (IMH) and penetrating atherosclerotic ulcer (PAU)",
+          "Thoracic aortic aneurysm (TAA) sizing and pre-TEVAR planning",
+          "Traumatic aortic pseudoaneurysm / isthmus transection in deceleration trauma"
+        ],
+        "contrast": "80–100 mL contrast @ 4.0–4.5 mL/s + 40 mL saline flush",
+        "technique": {
+          "ECG Gating": "Prospective or retrospective ECG gating to eliminate ascending aortic root pulsation artifact",
+          "Slice": "0.625 mm isotropic voxels",
+          "Scan Range": "Lung apices through iliac bifurcation (entire aorta)",
+          "Phases": "Unenhanced scan (to detect high-attenuation crescent of IMH) followed by arterial CTA"
+        },
+        "positioning": "Patient supine, arms raised. Fast gantry rotation (0.28s) synchronized with ECG R-wave trigger.",
+        "notes": "Type A involves the ascending aorta and requires emergent surgical repair; Type B is distal to left subclavian origin."
+      },
+      {
+        "id": "xr_chest_pa_lat",
+        "name": "Chest Radiography (Standard PA & Lateral)",
+        "modality": "X-RAY",
+        "indications": [
+          "Pneumonia, consolidation, and pulmonary infiltrates",
+          "Pneumothorax (visceral pleural line with absent peripheral lung markings)",
+          "Pleural effusion (blunting of costophrenic and cardiophrenic angles)",
+          "Congestive heart failure (cardiomegaly, Kerley B lines, cephalization of vessels)",
+          "Pulmonary nodules, masses, and mediastinal widening"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "PA: 110–125 kVp (high kVp technique penetrates mediastinum), 3–5 mAs; Lateral: 120 kVp, 8–15 mAs",
+          "SID": "180 cm (72 inches) to minimize cardiac magnification",
+          "Grid": "Yes (moving or stationary 10:1 grid)",
+          "Focal Spot": "Large focal spot (1.2 mm) with high mA for short exposure time (<10 ms)",
+          "Breathing": "Suspended full inspiration on second breath (count 10 posterior ribs above diaphragm)"
+        },
+        "positioning": "PA: Patient standing facing bucky, chin elevated on rest, hands on hips with elbows rolled forward to rotate scapulae laterally out of lung fields. Lateral: Left side against bucky (reduces heart magnification), arms raised overhead holding support bar.",
+        "notes": "Cardiothoracic ratio (CTR) on PA view should be <= 50% in healthy adults. Lateral view confirms retrosternal and retrocardiac clear spaces."
+      },
+      {
+        "id": "xr_chest_ap_portable",
+        "name": "Portable / Supine AP Chest Radiography (ICU Protocol)",
+        "modality": "X-RAY",
+        "indications": [
+          "Endotracheal tube (ETT) tip verification (ideal: 3–5 cm above carina at T2-T4 level)",
+          "Central venous catheter (CVC) tip position (ideal: cavoatrial junction)",
+          "Enteric nasogastric (NGT) tube tip localization (below diaphragm in stomach)",
+          "Acute respiratory distress syndrome (ARDS) monitoring and barotrauma/pneumothorax"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "85–95 kVp, 4–8 mAs",
+          "SID": "100–120 cm",
+          "Grid": "Virtual grid software or anti-scatter mobile grid",
+          "Projection": "Anteroposterior (AP) supine or semi-erect"
+        },
+        "positioning": "Detector behind patient's back. Elevate head of bed as much as tolerated. Tube angled perpendicular to sternum.",
+        "notes": "Remember: Heart appears 15–20% magnified on AP portable radiographs compared to standard PA."
+      },
+      {
+        "id": "mri_cardiac",
+        "name": "Cardiac MRI protocols, Planning and Techniques",
+        "modality": "MRI",
+        "indications": [
+          "The right atrioventricular valve/tricuspid valve separates the right atrium and right ventricle",
+          "The left atrioventricular valve/mitral valve separates the left atrium and left ventricle",
+          "The right semilunar/pulmonary valve lies between the right ventricle and pulmonary trunk",
+          "The left semilunar/aortic valve lies between the left ventricle and the aorta",
+          "Fibrous pericardium is the outer layer which attaches to the diaphragm, vena cava, aorta and sternum",
+          "Parietal pericardium is the middle serous layer"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Chest Phased Array Coil"
+        },
+        "positioning": "Patient positioned comfortably supine on table. Centered with laser crosshair over chest region. Immobilize with foam pads.",
+        "notes": "For the assessment of aorta and great vessels diseases"
+      },
+      {
+        "id": "mri_cardiac_perf",
+        "name": "Cardiac Stress Perfusion MRI Protocols, Planning and Techniques",
+        "modality": "MRI",
+        "indications": [
+          "Instruct the patient to breathe in, but not too deeply.",
+          "Instruct the patient to breathe out and then to stop breathing.",
+          "Ask the patient to breathe normally after the scan (usually for under 20 minutes)."
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Chest Phased Array Coil"
+        },
+        "positioning": "The semilunar valves are made up of three cusps each and serve the purpose of halting the blood from flowing back into the ventricles after a ventricular contraction. Positioned at the center of each valve is a fibrous nodule, and in the presence of increased back pressure, the cusps balloon outwards, causing their opp",
+        "notes": "The heart is a muscular pump that receives deoxygenated blood and propels oxygenated blood to various parts of the body. It is composed of four chambers: the right atrium, right ventricle, left atrium, and left ventricle."
+      },
+      {
+        "id": "mra_subclavian",
+        "name": "Magnetic Resonance Angiography(MRA) Subclavians",
+        "modality": "MRA",
+        "indications": [
+          "LOCALIZER_TRUFI_3 PLANE_ARM DOWN",
+          "T1_FLASH 3D_CORONAL_ARM DOWN_ PRE",
+          "T1_FLASH 3D_CORONAL_ARM DOWN_ POST",
+          "LOCALIZER_TRUFI_3 PLANE_ARM UP",
+          "T1_FLASH 3D_CORONAL_ARM UP_ PRE",
+          "T1_FLASH 3D_CORONAL_ARM UP_ POST"
+        ],
+        "contrast": "IV Gadolinium chelate (0.1 mmol/kg @ 1.5–2.0 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Chest Phased Array Coil"
+        },
+        "positioning": "A three-plane TrueFISP localizer must be taken initially to localize and plan the sequences. These are fast single-shot localizers with under 25s acquisition time, which are excellent for localizing vascular structures. Take at least 5-8 slices in all planes to get the best results.",
+        "notes": "Plan the coronal slices on the sagittal plane; angle the positioning block parallel to the carotid arteries and veins (alternatively, make it parallel to the cervical spine). Check the positioning block in the other two planes. Provide an appropriate angle in the axial plane (parallel to the right a"
+      },
+      {
+        "id": "mri_chest",
+        "name": "Chest MRI",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T1_VIBE_FAT SAT_CORONAL_BREATH HOLD",
+          "T2_TSE_CORONAL_BREATH HOLD",
+          "T1_VIBE_FAT SAT_AXIAL_BREATH HOLD",
+          "T2_TSE_AXIAL_BREATH HOLD",
+          "T2_TSE_FAT SAT_AXIAL_BREATH HOLD"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Chest Phased Array Coil"
+        },
+        "positioning": "To localize and plan the sequences, it is essential to acquire a three-plane T2 HASTE localizer initially. These fast single-shot localizers have an acquisition time of under 25 seconds and are highly effective in accurately localizing abdominal structures.",
+        "notes": "Plan the coronal slices on the axial localizer and position the block horizontally across the chest as shown. Verify the planning in the other two planes. Establish an appropriate angle in the sagittal plane by aligning it vertically across the chest. The slices must be sufficient to cover the entir"
+      },
+      {
+        "id": "mri_breast",
+        "name": "MRI Breast Scan",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_STIR_AXIAL",
+          "T1_FLASH 3D_AXIAL_NON FAT SAT 1MM",
+          "T2_TSE_SAGITTAL_RT",
+          "T2_TSE_SAGITTAL_LT",
+          "T1_FLASH 3D_AXIAL_FAT SAT 1MM DYNAMIC 1 PRE 5 POST"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Chest Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken to plan the sequences. Localizers are normally less than 25 seconds and consist of T1-weighted low-resolution scans.",
+        "notes": "Plan the axial slices on the sagittal plane and align the position block parallel to the breast. Verify the positioning block in the other two planes. Ensure an appropriate angle is set in the coronal plane, parallel to the right and left nipples. The slices should be sufficient to cover the entire "
+      }
+    ]
+  },
+  "Abdomen": {
+    "title": "Abdomen & Gastrointestinal Radiology Reference",
+    "content": "<p>Complete diagnostic protocols for acute abdominal pain, parenchymal liver lesions (HCC, hemangioma, metastases), pancreatic adenocarcinoma, renal calculi, urinary tract urothelial staging, and plain film bowel obstruction assessment.</p><details><summary>Multiphase Liver CT Hemodynamics</summary><div class='details-content'><p>Liver has dual blood supply: 75% portal vein, 25% hepatic artery. Normal parenchyma enhances on portal venous phase (70s). Hypervascular tumors (HCC, FNH) receive exclusive arterial supply, producing intense arterial enhancement (30–35s) followed by wash-out on portal venous/delayed phases.</p></div></details>",
+    "procedures": [
+      {
+        "id": "ct_liver_multiphase",
+        "name": "Triple-Phase / Multiphase Liver CT (HCC Protocol)",
+        "modality": "CT",
+        "indications": [
+          "Hepatocellular carcinoma (HCC) screening in cirrhosis (LI-RADS classification)",
+          "Focal nodular hyperplasia (FNH) with central scar vs hepatic adenoma",
+          "Cavernous hemangioma (peripheral nodular puddling with centripetal fill-in)",
+          "Colorectal cancer liver metastases (hypervascular vs hypovascular staging)",
+          "Pre-operative hepatic resection and liver transplant volumetry"
+        ],
+        "contrast": "120–150 mL non-ionic contrast (350 mg I/mL) @ 4.0–5.0 mL/s via large bore IV + 40 mL saline",
+        "technique": {
+          "kVp / mAs": "120 kVp, 250 mAs (AEC)",
+          "Phase 1 - Non-contrast": "Baseline detection of calcifications, fat, and glycogen stores",
+          "Phase 2 - Late Arterial": "30–35 seconds post-injection (bolus tracking trigger + 15s delay)",
+          "Phase 3 - Portal Venous": "70 seconds post-injection (peak liver parenchymal opacification)",
+          "Phase 4 - Delayed / Equilibrium": "3–5 minutes post-injection (capsule enhancement and washout)",
+          "Slice / Window": "1.0 mm raw, 2.5 mm reformats; Liver Window: WW: 150, WL: 70 HU"
+        },
+        "positioning": "Patient supine, arms elevated above head. Scan performed on suspended full inspiration.",
+        "notes": "LI-RADS 5 criteria: Non-rim arterial phase hyperenhancement + washout appearance + enhancing capsule or size >= 10 mm with growth."
+      },
+      {
+        "id": "ct_abdomen_pelvis_acute",
+        "name": "CT Abdomen & Pelvis with IV Contrast (Acute Abdomen)",
+        "modality": "CT",
+        "indications": [
+          "Acute appendicitis (dilated appendix >6 mm, wall thickening, periappendiceal fat stranding, appendicolith)",
+          "Acute diverticulitis (sigmoid colonic wall thickening, pericolic fat haziness, abscess)",
+          "Small bowel obstruction (transition point, closed-loop strangulation, mesenteric swirl)",
+          "Bowel ischemia and pneumatosis intestinalis with portal venous gas",
+          "Pneumoperitoneum from gastrointestinal perforation"
+        ],
+        "contrast": "100–120 mL IV contrast @ 3.0 mL/s, scanned at portal venous phase (70–75s). Oral/rectal contrast per institutional protocol.",
+        "technique": {
+          "kVp / mAs": "120 kVp, auto mA modulation (CARE Dose / ASiR)",
+          "Slice": "0.625 mm raw acquisition, 2.5 mm axial, coronal, and sagittal MPR",
+          "Soft Tissue Window": "WW: 400, WL: 40 HU",
+          "Bowel Window": "WW: 600, WL: 100 HU",
+          "Bone Window": "WW: 1800, WL: 400 HU",
+          "Coverage": "Diaphragmatic dome to pubic symphysis"
+        },
+        "positioning": "Patient supine, arms comfortably overhead. Single breath-hold (10–12 seconds).",
+        "notes": "Coronal multiplanar reformats are essential for tracing mesenteric vessels and identifying internal hernia orifices."
+      },
+      {
+        "id": "ct_urography",
+        "name": "CT Urography (Split-Bolus Hematuria Protocol)",
+        "modality": "CT",
+        "indications": [
+          "Painless gross hematuria or high-risk microscopic hematuria",
+          "Upper tract urothelial carcinoma (UTUC) of renal pelvis and ureters",
+          "Renal cell carcinoma (RCC) staging and vascular invasion (renal vein / IVC thrombus)",
+          "Ureteral stricture, obstruction, and retroperitoneal fibrosis"
+        ],
+        "contrast": "Split-bolus technique: Bolus 1 (30–40 mL @ 2.0 mL/s) -> 8 min wait -> Bolus 2 (80 mL @ 3.0 mL/s) -> scan at 90s after 2nd bolus. Combines nephrographic + excretory phases in a SINGLE scan!",
+        "technique": {
+          "kVp / mAs": "120 kVp, 200–280 mAs",
+          "Reconstruction": "0.625 mm contiguous slices, coronal/sagittal MIP and 3D volume rendering of urinary tract",
+          "Hydration": "Oral water hydration (500–750 mL) 20 min prior to distend pelvicalyceal system"
+        },
+        "positioning": "Supine. Full scan from diaphragm through urethra.",
+        "notes": "Split bolus dramatically halves patient radiation dose compared to traditional separate 4-phase CT urography."
+      },
+      {
+        "id": "xr_abdomen_kub",
+        "name": "Abdominal Radiography (KUB - Supine)",
+        "modality": "X-RAY",
+        "indications": [
+          "Radio-opaque renal and ureteric calculi (calcium oxalate, struvite, cystine stones)",
+          "Bowel gas distribution, adynamic ileus, and toxic megacolon",
+          "Foreign body ingestion and medical device positioning (ureteric stent, feeding tube)",
+          "Abdominal calcifications (porcelain gallbladder, vascular calcifications, nephrocalcinosis)"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "75–80 kVp (low-medium kVp preserves contrast for calcifications), 25–40 mAs",
+          "SID": "100 cm",
+          "Grid": "Yes (10:1 or 12:1)",
+          "Focal Spot": "Large",
+          "Breathing": "Exposure at end of full expiration (raises diaphragm to optimize coverage)"
+        },
+        "positioning": "Patient supine, midsagittal plane aligned to midline of table. CR directed perpendicular to iliac crests (L4-L5 level). Lower border must include pubic symphysis to avoid missing distal ureteric calculi.",
+        "notes": "Kidneys, Ureters, and Bladder (KUB) outline should be inspected along psoas muscle shadows."
+      },
+      {
+        "id": "xr_abdomen_erect",
+        "name": "Erect Abdomen / Left Lateral Decubitus (Free Air / Obstruction)",
+        "modality": "X-RAY",
+        "indications": [
+          "Pneumoperitoneum: Subdiaphragmatic free crescentic gas in bowel perforation",
+          "Mechanical small bowel obstruction: multiple central air-fluid levels ('step-ladder' sign)",
+          "Large bowel obstruction: peripheral colonic distension with competent ileocecal valve",
+          "Volvulus: Sigmoid volvulus ('coffee bean' sign arising from pelvis) vs cecal volvulus"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "80–85 kVp, 25–35 mAs",
+          "SID": "100–120 cm with grid",
+          "Erect Time": "Patient must remain upright or in left lateral decubitus for at least 5–10 MINUTES before exposure to allow free gas to ascend!"
+        },
+        "positioning": "Erect: Patient stands with back against vertical bucky, CR horizontal 5 cm above iliac crest to capture diaphragms. Decubitus: Patient on left side (liver down, air rises along right flank away from stomach gas bubble).",
+        "notes": "As little as 1 mL of free intraperitoneal gas can be detected under the right hemidiaphragm on a well-positioned erect film."
+      },
+      {
+        "id": "mri_liver",
+        "name": "Liver MRI",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_TSE_BLADE_AXI_TRIG",
+          "T2_TSE_FAT SAT_BLADE_AXI_TRIG",
+          "T1_VIBE_3D_3MM_COR",
+          "T1_IN_OPPOSE_AXI",
+          "T2_TSE_TE90_AXI"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "To localize and plan the sequences, it is essential to acquire a three-plane T2 HASTE localizer initially. These fast single-shot localizers have an acquisition time of under 25 seconds and are highly effective in accurately localizing abdominal structures.",
+        "notes": "MRI is one of the most useful and rapidly developing diagnostic tools for evaluating liver pathologies. MRI allows the acquisition of images with excellent tissue contrast and anatomical detail. It is particularly effective in visualizing liver tissue and can detect and characterize focal liver lesi"
+      },
+      {
+        "id": "mrcp",
+        "name": "MRCP Planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_HASTE_FAT SAT_CORONAL",
+          "T2_TRUFI_AXIAL",
+          "T2_HASTE_FAT SAT_AXIAL",
+          "T2_HASTE_40MM_CORONAL OBL",
+          "T2_HASTE_40MM_CORONAL OBL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "To localize and plan the sequences, it is essential to acquire a three-plane T2 HASTE localizer initially. These fast single-shot localizers have an acquisition time of under 25 seconds and are highly effective in accurately localizing abdominal structures.",
+        "notes": "The anatomy of the biliary system is of utmost importance in radiology as it plays a crucial role in the diagnosis and treatment of biliary disorders. The biliary system consists of various interconnected structures that facilitate the production, transportation, and storage of bile."
+      },
+      {
+        "id": "secretin_mrcp",
+        "name": "Secretin Stimulated MRCP Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_TRUFI_CORONAL-3MM",
+          "T1_TSE_AXIAL_BH_3MM",
+          "T2_TSE_AXIAL_ FAT SAT_BH_3MM",
+          "T2_SPACE 3D 0.6MM_GATED_3MM",
+          "T1_VIBE-FAT SAT_AXIAL_3MM"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "To localize and plan the sequences, it is essential to acquire a three-plane T2 HASTE localizer initially. These fast single-shot localizers have an acquisition time of under 25 seconds and are highly effective in accurately localizing abdominal structures.",
+        "notes": "Secretin, a vital hormone in digestive system regulation, is predominantly synthesized in the S cells of the duodenum, the initial part of the small intestine. Its release is triggered by the presence of acidic chyme, a partially digested food mix, entering the duodenum from the stomach."
+      },
+      {
+        "id": "mri_pancreas",
+        "name": "Pancreas MRI Planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_TRUFI_CORONAL_LARG FOV_BREATH HOLD",
+          "T1_VIBE_IN_OPPOSE_SFOV_AXIAL",
+          "T2_TSE_AXIAL_SFOV_BREATH_HOLD",
+          "T2_TSE_AXIAL_SFOV_FAT SAT_BREATH_HOLD",
+          "T2_TSE 3D CORONAL 1MM GATED"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "To localize and plan the sequences, it is essential to acquire a three-plane T2 HASTE localizer initially. These fast single-shot localizers have an acquisition time of under 25 seconds and are highly effective in accurately localizing abdominal structures.",
+        "notes": "The pancreas is a glandular organ located in the abdomen, nestled behind the stomach. It plays a crucial role in the digestive and endocrine systems. Structurally, the pancreas can be divided into three main regions: the head, body, and tail. The head of the pancreas lies on the right side, connecte"
+      },
+      {
+        "id": "mri_kidneys",
+        "name": "MRI Kidneys (Renal) Planning",
+        "modality": "MRI",
+        "indications": [
+          "localize_3plane",
+          "T2 HASTE_coronal_BH",
+          "T2_TSE_axial_3mm_BH",
+          "T2 TSE_fat sat_3mm_bh",
+          "EPI DWI_axial_3MM_FB",
+          "T1_VIBE_DIXON_axial_3MM_bh"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "To localize and plan the sequences, it is essential to acquire a three-plane T2 HASTE localizer initially. These fast single-shot localizers have an acquisition time of under 25 seconds and are highly effective in accurately localizing abdominal structures.",
+        "notes": "Plan the coronal slices on the axial plane and angle the positioning block parallel to the right and left kidneys. Check the positioning block in the other two planes. Provide an appropriate angle in the sagittal plane (parallel to the long axis of the kidney). Ensure that the slices are sufficient "
+      },
+      {
+        "id": "mra_renal",
+        "name": "MRI Renal Angiography (MRA kidneys)  and Indications",
+        "modality": "MRA",
+        "indications": [
+          "localizer_3plane",
+          "T1_FLASH_3D FAT SAT CORONAL PRE",
+          "T1_FLASH_3D FAT SAT CORONAL POST"
+        ],
+        "contrast": "IV Gadolinium chelate (0.1 mmol/kg @ 1.5–2.0 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "To localize and plan the sequences, it is essential to acquire a three-plane T2 HASTE localizer initially. These fast single-shot localizers have an acquisition time of under 25 seconds and are highly effective in accurately localizing abdominal structures.",
+        "notes": "Plan the coronal slices on the axial plane; angle the positioning block horizontally across the right and left kidneys. Check the positioning block in the other two planes. An appropriate angle must be given in the sagittal plane (parallel to the abdominal aorta). Slices should be sufficient to cove"
+      },
+      {
+        "id": "mri_adrenals",
+        "name": "MRI Adrenal Glands: Protocol, Planning, Positioning, and Indications.",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T2_TRUFI_CORONAL_LARG FOV _BREATH HOLD",
+          "T1_VIBE_IN_OPPOSE_SFOV_ AXIAL",
+          "T2_TSE_AXIAL_SFOV_BREATH HOLD",
+          "T2_TSE_AXIAL_SFOV_FAT SAT_BREATH HOLD",
+          "T1_VIBE 3D_AXIAL_BREATH HOLD_SFOV"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "A three-plane T2 HASTE localizer must be taken initially to localize and plan the sequences. These fast, single-shot localizers usually have an acquisition time of less than 25 seconds, which is excellent for localizing abdominal structures.",
+        "notes": "The adrenal glands are small, triangular-shaped endocrine glands located on top of each kidney. Consisting of two distinct regions, the outer cortex and inner medulla, they play a crucial role in hormone production and regulation. The adrenal cortex synthesizes and secretes steroid hormones such as "
+      },
+      {
+        "id": "mri_enterography",
+        "name": "Small bowel MRI (Enterography) Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_TRUFI_CORONAL-BH_4MM",
+          "T2_TRUFI_AXIAL_BH_4MM",
+          "T1-FLASH_CORONAL_BH_1MM_PRE",
+          "T2_HASTE_CORONAL_BH_4MM",
+          "T2_HASTE_AXIAL_BH_4MM"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "To localize and plan the sequences, it is necessary to obtain an initial three-plane HASTE localizer. These fast single-shot localizers have an acquisition time of under 25 seconds, making them ideal for accurate localization of abdominal structures.",
+        "notes": "The purpose of utilizing an oral contrast agent is to achieve specific signal intensities in the bowel lumen on different types of MRI images. On T2-weighted images, the aim is to produce a high signal intensity in the bowel lumen, while on T1-weighted images, a low signal intensity in the lumen is "
+      },
+      {
+        "id": "mri_prostate",
+        "name": "MRI Prostate Planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_TSE_SAGITTAL_SFOV",
+          "T2_TSE_AXIAL_SFOV",
+          "T2_TSE_CORONAL_SFOV",
+          "ZOOMit_4TRACE_AXIAL",
+          "T1_TSE_AXIAL_BIG FOV_WHOLE PELVIS"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "A three-plane HASTE localizer must be taken initially to localize and plan the sequences. These are fast, single-shot localizers with under 25s acquisition time, which are excellent for localizing abdominal and pelvic structures.",
+        "notes": "Plan the sagittal slices on the axial plane, angling the positioning block parallel to the interpubic fibrocartilage and the anal canal. Check the positioning block in the other two planes, ensuring an appropriate angle is given in the coronal plane (parallel to the interpubic fibrocartilage). The s"
+      },
+      {
+        "id": "mri_rectal_ca",
+        "name": "MRI rectal cancer protocols and planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_TSE_SMALL FOV_SAGITTAL",
+          "T2_TSE_BIG FOV_AXIAL",
+          "T2_TSE_SMALL FOV_AXIAL_OBLIQUE",
+          "T2_TSE_SMALL FOV_CORONAL_OBLIQUE"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are normally less than 25 seconds and are T1/T2 weighted low-resolution scans.",
+        "notes": "Plan the sagittal slices on the axial plane; angle the positioning block parallel to the interpubic fibrocartilage and the anal canal. Check the positioning block in the other two planes. Provide an appropriate angle in the coronal plane (parallel to the rectum and the anal canal). Ensure that the s"
+      },
+      {
+        "id": "mri_fistula",
+        "name": "MRI Pelvis Anal fistula protocols and planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3 plane",
+          "T2_TSE_SAGITTAL_3MM",
+          "T2_STIR_SAGITTAL_3MM",
+          "T2_STIR_AXIAL_OBL_3MM",
+          "T2_STIR_CORONAL_OBL_3MM"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "To localize and plan the sequences, it is essential to initially acquire a three-plane T2 HASTE localizer. These fast single-shot localizers have an acquisition time of under 25 seconds and are highly effective in accurately localizing pelvic structures.",
+        "notes": "For proper planning of fistula scans, it is necessary to include a second two-plane localizer. The two-plane localizer should be positioned on the sagittal plane. Align the planning block parallel to the anal canal for the coronal plane and perpendicular to the anal canal for the axial plane."
+      },
+      {
+        "id": "mri_gyn_pelvis",
+        "name": "Gynaecologic MRI Pelvis (Uterus,Cervix and Adnexal) Protocols and planning",
+        "modality": "MRI",
+        "indications": [
+          "localize_3plane",
+          "T2_TSE_SAGITTAL_SFOV",
+          "T2_TSE_AXIAL_BIG-FOV_WHOLE PELVIS",
+          "T1_TSE_AXIAL_BIG FOV_WHOLE PELVIS",
+          "T2_STIR_CORONAL_BIG FOV",
+          "T1_TSE_AXIAL_3MM_SFOV"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "A three plane localiser must be taken in the beginning to localise and plan the sequences. Localisers are normally less than 25sec. T1 weighted low resolution scans.",
+        "notes": "* Buscopan injection should not be administered to patients with myasthenia gravis, megacolon, narrow angle glaucoma, tachycardia, prostatic enlargement with urinary retention, mechanical stenoses in the region of the gastrointestinal tract or paralytic ileus.*"
+      },
+      {
+        "id": "mri_sij",
+        "name": "Sacroiliac Joints MRI Planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T1_TSE_CORONAL",
+          "T2_STIR_CORONAL",
+          "T2_STIR_AXIA"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Abdomen Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers typically take less than 25 seconds and are T1-weighted with low resolution.",
+        "notes": "Plan the coronal oblique slices on the sagittal plane; angle the positioning block parallel to the sacrum. Check the positioning block in the other two planes. An appropriate angle must be given in the axial plane (parallel to the sacral ala). Slices must be sufficient to cover the whole sacroiliac "
+      }
+    ]
+  },
+  "Spine": {
+    "title": "Spine & Neuro-Axis Radiology Reference",
+    "content": "<p>Imaging protocols for acute spinal cord trauma, spinal canal stenosis, disc herniation, spondylolisthesis, vertebral compression fractures, and spinal cord tumors.</p><details><summary>Denis Three-Column Spine Concept</summary><div class='details-content'><p>Anterior Column (ALL, anterior 2/3 vertebral body/disc), Middle Column (posterior 1/3 vertebral body, PLL), Posterior Column (pedicles, facets, lamina, spinous processes). Disruption of 2 or more columns indicates mechanical spinal instability requiring surgical stabilization.</p></div></details>",
+    "procedures": [
+      {
+        "id": "ct_spine_trauma",
+        "name": "CT Cervical / Thoracic / Lumbar Spine (Bone Trauma)",
+        "modality": "CT",
+        "indications": [
+          "Traumatic burst fractures and retropulsed bone fragments into spinal canal",
+          "Chance fracture (flexion-distraction injury across all 3 columns)",
+          "Spondylolysis (pars interarticularis defect) and spondylolisthesis grading",
+          "Pathologic compression fractures (osteoporosis vs neoplastic infiltration)",
+          "Post-operative pedicle screw placement and fusion cage assessment"
+        ],
+        "contrast": "Usually non-contrast for bone evaluation (IV contrast added if epidural hematoma/abscess suspected)",
+        "technique": {
+          "kVp / mAs": "120–140 kVp (140 kVp for dense shoulders/pelvis), 300–400 mAs",
+          "Acquisition": "0.625 mm helical acquisition",
+          "Reconstructions": "0.625 mm contiguous slices, multiplanar coronal and sagittal reformations",
+          "Bone Window": "WW: 2000–2500, WL: 400–500 HU (sharp bone algorithm)",
+          "Soft Tissue Window": "WW: 350, WL: 40 HU"
+        },
+        "positioning": "Patient supine, arms on chest or overhead (for thoracolumbar). Shoulders pulled down for cervical spine.",
+        "notes": "Measure percentage spinal canal narrowing caused by retropulsed bone fragments; assess sagittal spinal curvature and facet apposition."
+      },
+      {
+        "id": "xr_lspine",
+        "name": "Lumbar Spine Radiography (AP, Lateral, L5-S1 Spot, Oblique)",
+        "modality": "X-RAY",
+        "indications": [
+          "Chronic low back pain and radiculopathy",
+          "Spondylolisthesis (Meyerding grading: Grade I <25% to Grade V spondyloptosis)",
+          "Pars interarticularis defect ('Scottie dog' collar break on 45° obliques)",
+          "Vertebral body height loss, osteophytes, and endplate sclerosis",
+          "Lumbar sacralization (L5) or sacral lumbarization (transitional vertebrae)"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "AP: 75–80 kVp, 25–40 mAs; Lateral: 85–90 kVp, 50–80 mAs; L5-S1 Spot: 90–95 kVp, 80–120 mAs",
+          "SID": "100 cm",
+          "Grid": "High ratio grid (12:1 or 16:1) due to substantial abdominal scatter",
+          "Focal Spot": "Large focal spot",
+          "Breathing": "Suspended expiration"
+        },
+        "positioning": "AP: Supine with knees and hips flexed to flatten lumbar lordosis and open intervertebral disc spaces. Lateral: True lateral recumbent, CR perpendicular to iliac crest (L4) or 4 cm above crest. L5-S1 Spot: CR angled 5–8° caudad (males) or 8–12° caudad (females) to parallel interspace.",
+        "notes": "On 45° obliques, identify the 'Scottie Dog': Eye = pedicle, Ear = superior articular process, Nose = transverse process, Foreleg = inferior articular process, Neck = pars interarticularis."
+      },
+      {
+        "id": "mri_c_spine",
+        "name": "Cervical Spine MRI protocols and planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane.",
+          "T2_TSE_SAGITTAL",
+          "T1_TSE_SAGITTAL",
+          "T2_TSE_STIR_SAGITTAL",
+          "T2_ TSE_ AXIAL",
+          "T1_TSE_AXIAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Spine Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are normally less than 25 seconds, and they consist of T1-weighted low-resolution scans.",
+        "notes": "Plan the sagittal slices on the coronal plane; angle the positioning block parallel to the spinal cord. Check the positioning block in the other two planes. An appropriate angle must be given in the axial plane (parallel to the line along the center of the vertebral body through the length of the sp"
+      },
+      {
+        "id": "mri_t_spine",
+        "name": "Thoracic spine MRI Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "LOCALIZER_3 PLANE",
+          "T2_TSE_SAGITTAL",
+          "T1_TSE_SAGITTAL",
+          "T2_TSE_STIR_SAGITTAL",
+          "T2_TSE_AXIAL",
+          "T1_TSE_AXIAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Spine Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are typically less than 25 seconds and consist of T1-weighted low-resolution scans.",
+        "notes": "Plan the sagittal slices on the coronal plane and angle the positioning block parallel to the spinal cord. Check the positioning block in the other two planes. An appropriate angle must be given in the axial plane, parallel to the line along the center of the vertebral body and the spinous process. "
+      },
+      {
+        "id": "mri_l_spine",
+        "name": "Lumbar (lumbosacral) Spine MRI Planning and Protocols",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T2_TSE_SAGITTAL",
+          "T1_TSE_SAGITTAL",
+          "T2_TSE_STIR_SAGITTAL",
+          "T2_TSE_AXIAL",
+          "T1_TSE_AXIAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Spine Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually less than 25 seconds and are T2\\T1-weighted low-resolution scans.",
+        "notes": "Plan the sagittal slices on the coronal plane and angle the position block parallel to the spinal cord. Check the positioning block in the other two planes, ensuring an appropriate angle is given in the axial plane (parallel to the center of the vertebral body and the spinous process). Verify the po"
+      },
+      {
+        "id": "mri_cord",
+        "name": "spinal cord mri protocols, planning and indications",
+        "modality": "MRI",
+        "indications": [
+          "localize C-T spine_3plane",
+          "T2_sagittal_large FOV",
+          "T2_sagittal_2mm_SFOV",
+          "T1_sagittal_2mm_SFOV",
+          "T2_axial_3mm_SFOV",
+          "T1_axial_3mm_SFOV"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated Spine Phased Array Coil"
+        },
+        "positioning": "A three plane localiser must be taken in the beginning to localise and plan the sequences. Localisers are normally less than 25 seconds long and are T1 weighted low resolution scans.",
+        "notes": "Plan the sagittal slices on the coronal plane, angle the position block parallel to the spinal cord. Check the positioning block in the other two planes. An appropriate angle must be given in the axial plane on a tilted patient, this should be parallel to the imaginary line running through the centr"
+      }
+    ]
+  },
+  "UpperLimb": {
+    "title": "Upper Extremity MSK & Angiography Reference",
+    "content": "<p>High-resolution orthopedic and vascular imaging of the shoulder girdle, humerus, elbow joint, wrist carpals (scaphoid series), hand, and upper extremity run-off angiography.</p><details><summary>Scaphoid Fracture Radiographic Protocols</summary><div class='details-content'><p>Scaphoid fractures represent 70% of carpal fractures. Blood supply enters retrograde via the dorsal ridge near the distal pole. Waist and proximal pole fractures carry high risk of avascular necrosis (AVN) and nonunion, mandating a 4-view scaphoid radiographic series with 20° ulnar deviation.</p></div></details>",
+    "procedures": [
+      {
+        "id": "ct_upper_limb_3d",
+        "name": "CT Upper Extremity & Joint with 3D Volume Rendering",
+        "modality": "CT",
+        "indications": [
+          "Complex proximal humerus 3-part and 4-part Neer fractures",
+          "Glenoid bone loss measurement (inverted pear appearance, Best-Fit circle method)",
+          "Distal radius intra-articular step-off and comminution (Fernandez / Frykman)",
+          "Occult scaphoid fracture and nonunion avascular necrosis staging"
+        ],
+        "contrast": "None (unenhanced bone algorithm), or CT Arthrography (intra-articular iodinated contrast for labral/TFCC tears)",
+        "technique": {
+          "kVp / mAs": "120 kVp, 100–180 mAs",
+          "Slice": "0.5–0.625 mm isotropic voxels",
+          "Post-processing": "Multiplanar reconstructions (MPR) aligned to joint axes, 3D volume rendering with digital subtraction of superimposed bones",
+          "Bone Window": "WW: 2500, WL: 500 HU"
+        },
+        "positioning": "Shoulder: Patient supine, arm at side in neutral rotation. Wrist: Patient prone in 'Superman' position (arm extended overhead) to place wrist in scanner isocenter and minimize cone-beam artifacts.",
+        "notes": "Sub-millimeter volumetric CT accurately detects articular incongruity >= 1.0 mm, which guides surgical fixation."
+      },
+      {
+        "id": "xr_shoulder",
+        "name": "Shoulder Series (AP Grashey True AP, Scapular Y, Axillary)",
+        "modality": "X-RAY",
+        "indications": [
+          "Shoulder dislocation: Anterior (95% - subcoracoid) vs Posterior (5% - lightbulb sign on AP)",
+          "Hill-Sachs lesion (posterolateral humeral head impaction) and Bankart fracture",
+          "Rotator cuff arthropathy (high-riding humeral head, acromiohumeral distance <7 mm)",
+          "Proximal humerus fracture (greater/lesser tuberosity, surgical neck)"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "70–75 kVp, 10–16 mAs",
+          "SID": "100 cm",
+          "Grid": "Yes (8:1 or 10:1)",
+          "Grashey View": "Patient rotated 35–45° toward affected side; CR perpendicular to glenohumeral joint"
+        },
+        "positioning": "Grashey: Rotates glenoid cavity into true profile with no humeral head overlap. Scapular Y: Patient anterior oblique 45–60°, CR tangential to scapula blade; humeral head should sit dead center at intersection of Y arms (acromion and coracoid).",
+        "notes": "Always perform an axillary or Y view in acute trauma: an AP view alone CANNOT reliably exclude posterior shoulder dislocation."
+      },
+      {
+        "id": "xr_wrist_scaphoid",
+        "name": "Wrist & Scaphoid Radiography (4-View Series)",
+        "modality": "X-RAY",
+        "indications": [
+          "Fall on outstretched hand (FOOSH) with anatomical snuffbox tenderness",
+          "Scaphoid waist fracture, displacement, and humpback deformity",
+          "Colles fracture (dorsal displacement/angulation) vs Smith fracture (volar)",
+          "Scapholunate ligament dissociation (Terry Thomas sign: gap >3 mm)",
+          "Lunate / Perilunate dislocation and carpal instability (DISI / VISI)"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "55–60 kVp (low kVp for extreme carpal trabecular resolution), 3–5 mAs",
+          "SID": "100 cm, tabletop (no grid required)",
+          "Focal Spot": "Small focal spot (0.6 mm)",
+          "Projections": "PA, Lateral, PA with 20° Ulnar Deviation, Scaphoid Oblique 45°"
+        },
+        "positioning": "PA with ulnar deviation: Wrist flat on IR, gently ulnar-deviate hand without moving forearm; central ray angled 10–15° proximally along long axis of scaphoid to elongate it in profile.",
+        "notes": "If snuffbox tenderness is present with normal initial x-rays, immobilize in thumb spica splint and repeat x-rays in 10–14 days, or obtain urgent MRI."
+      },
+      {
+        "id": "mri_shoulder",
+        "name": "Shoulder MRI planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "PD_F_AXIAL_3MM",
+          "T2*_MEDIC_CORONAL_3MM",
+          "T1_TSE_CORONAL_3MM",
+          "T2_STIR_CORONAL_3MM",
+          "T2_TSE_SAGITTAL_3MM"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated UpperLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Typically, localizers take less than 25 seconds and utilize T1 weighted low-resolution scans for this purpose. It is advisable to acquire additional localizers based on the initial localizer to obtain accurate coronal, axial, and",
+        "notes": "Plan the axial slices on the coronal plane and angle the positioning block perpendicular to the glenohumeral joint. Check the positioning block in the other two planes. Use an appropriate angle in the sagittal plane, perpendicular to the humeral head. The slices should be sufficient to cover the ent"
+      },
+      {
+        "id": "mri_arthro_shoulder",
+        "name": "MRI shoulder arthrogram protocols and planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T1_VIBE 3D_FAT SAT_AXIAL_SFOV",
+          "T1_TSE_FAT SAT_CORONAL_SFOV",
+          "T1_STIR_CORONAL_SFOV",
+          "T1_TSE_FAT SAT_SAGITTAL_SFOV"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated UpperLimb Phased Array Coil"
+        },
+        "positioning": "Positioning for injection: Appropriate positioning of the shoulder is one of the most important parts of an arthrogram. Position the patient in supine with the arm externally rotated (palm of the hand up) to avoid the long head of the biceps tendon. Immobilize the arm using sandbags over the palm.",
+        "notes": "An arthrogram is an interventional procedure for the assessment of joint capsule pathologies. A radiologist will inject contrast medium into the joint space for the evaluation of joint abnormalities. Injections for mri shoulder arthrograms are normally done under x ray fluoroscopic guidance (some ra"
+      },
+      {
+        "id": "mri_elbow",
+        "name": "Elbow MRI",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T2*_MEDIC_AXIAL",
+          "T1_TSE_AXIAL",
+          "T1_TSE_CORONAL",
+          "T2_STIR_CORONAL",
+          "T2_MEDIC_SAGITTAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated UpperLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Typically, these localizers take less than 25 seconds and can be achieved using T1 weighted low-resolution scans. It is advisable to obtain additional localizers until you have acquired accurate axial, coronal, and sagittal local",
+        "notes": "Plan the axial slices on the coronal plane and angle the positioning block parallel to the medial and lateral humeral epicondyles. Check the positioning block in the other two planes. An appropriate angle must be used in the sagittal plane (perpendicular to the humerus and ulna). Slices must be suff"
+      },
+      {
+        "id": "mri_wrist",
+        "name": "Wrist MRI planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T2_medic_axial",
+          "T2_medic_coronal",
+          "T2_STIR_CORONAL",
+          "T1_TSE_CORONAL",
+          "T2_STIR_SAGITTAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated UpperLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually completed in less than 25 seconds. T1-weighted low-resolution scans are used for this purpose. A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usual",
+        "notes": "Plan the axial slices on the coronal plane; angle the positioning block horizontally across the wrist joint (i.e. across the carpal bones). Check the positioning block in the other two planes. An appropriate angle must be used in the sagittal plane (horizontally across the wrist joint). The slices s"
+      },
+      {
+        "id": "mra_upper_arm",
+        "name": "magnetic resonance angiography(MRA) upper arm protocols and planning",
+        "modality": "MRA",
+        "indications": [
+          "LOCALIZER_TRUFI_3 PLANE",
+          "T1_VIBE 3D_FAT SAT_PRE 2MM",
+          "T1_Flash_3D_Fat Sat_1mm_pre",
+          "T1_FLASH 3D_CORONAL_POST",
+          "T1_VIBE 3D_FAT SAT_POST 2MM"
+        ],
+        "contrast": "IV Gadolinium chelate (0.1 mmol/kg @ 1.5–2.0 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated UpperLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane TrueFISP\\HASTE localizer must be taken initially to localize and plan the sequences. These are fast single-shot localizers with an acquisition time under 25s, which are excellent for localizing vascular structures. Take at least 5-8 slices in all planes to get the best results.",
+        "notes": "Plan the axial slices on the coronal plane and angle the positioning block perpendicular to the humerus. Check the positioning block in the other two planes. An appropriate angle must be used in the sagittal plane (perpendicular to the humerus). Slices must be sufficient to cover the whole upper arm"
+      },
+      {
+        "id": "mra_hand",
+        "name": "MRA (magnetic resonance angiography) hand protocols and planning",
+        "modality": "MRA",
+        "indications": [
+          "localizer_3plane",
+          "T1_vibe_3d_fat_sat_pre_1mm",
+          "T1_Flash_3D_Fat Sat_1mm_pre",
+          "T1_Flash_3D_Fat Sat_1mm_post dynamic",
+          "T1_vibe_3D_Fat Sat_1mm"
+        ],
+        "contrast": "IV Gadolinium chelate (0.1 mmol/kg @ 1.5–2.0 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated UpperLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Typically, these localizers take less than 25 seconds and can be achieved using T1 weighted low-resolution scans. It is advisable to obtain additional localizers until you have acquired accurate axial, coronal, and sagittal local",
+        "notes": "Plan the axial slices on the coronal localizer and angle the positioning block perpendicular to the metacarpal and phalangeal bones. Check the positioning block in the other two planes. Ensure an appropriate angle is used in the sagittal plane, perpendicular to the metacarpal and phalangeal bones. T"
+      }
+    ]
+  },
+  "LowerLimb": {
+    "title": "Lower Extremity MSK & Angiography Reference",
+    "content": "<p>Comprehensive lower limb orthopedic and vascular imaging: Pelvis/Acetabulum, Hip joint, Knee meniscal/ligamentous protocols, Ankle Mortise views, and lower extremity run-off CTA/MRA for peripheral artery disease (PAD).</p><details><summary>Lower Extremity Run-Off CTA Protocol</summary><div class='details-content'><p>Scanned from upper abdominal aorta through the plantar arches of the feet. Requires dynamic pitch matching table velocity to the contrast bolus arrival speed (bolus chase), tracking through common iliac, external iliac, femoral, popliteal, anterior tibial, posterior tibial, and peroneal arteries.</p></div></details>",
+    "procedures": [
+      {
+        "id": "cta_lower_runoff",
+        "name": "CTA Lower Extremity Run-Off (Aortoiliac to Pedal)",
+        "modality": "CTA",
+        "indications": [
+          "Peripheral artery disease (PAD) with critical limb ischemia or rest pain",
+          "Claudication distance assessment (Rutherford / Fontaine classification)",
+          "Acute lower extremity arterial thrombosis / embolism (the 6 P's)",
+          "Popliteal artery aneurysm (bilateral in 50%) and entrapment syndrome",
+          "Pre-procedural planning for percutaneous balloon angioplasty, stenting, or bypass"
+        ],
+        "contrast": "120–140 mL iodinated contrast (350 mg I/mL) @ 4.0–4.5 mL/s + 50 mL saline flush",
+        "technique": {
+          "kVp / mAs": "100–120 kVp, auto mA",
+          "Coverage": "Diaphragm to toes (120–140 cm scan length)",
+          "Bolus Tracking": "ROI on infrarenal abdominal aorta, trigger 120 HU",
+          "Table Speed": "Variable pitch / chase mode matching contrast wave (approx 25–30 mm/s)",
+          "Reconstructions": "0.625 mm raw, coronal/sagittal MIP run-off displays, curved planar reformations (CPR) of SFA, popliteal, and tibials"
+        },
+        "positioning": "Patient supine, feet-first. Feet taped together with slight internal rotation to separate tibial and fibular shafts. Elevate legs slightly with foam pad.",
+        "notes": "Assess runoff vessels at the ankle: at least one patent direct-to-foot vessel (anterior tibial/dorsalis pedis or posterior tibial) is critical for limb salvage."
+      },
+      {
+        "id": "ct_knee_tibial_plateau",
+        "name": "CT Knee & Tibial Plateau (Schatzker Fracture Analysis)",
+        "modality": "CT",
+        "indications": [
+          "High-energy tibial plateau fractures (Schatzker Types I–VI)",
+          "Quantification of articular depression (>2–3 mm mandates surgical elevation)",
+          "Distal femoral intercondylar fracture comminution",
+          "Patellar fracture displacement and extensor mechanism disruption",
+          "Post-operative articular alignment and intra-articular loose bodies"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "120 kVp, 120–160 mAs",
+          "Slice": "0.625 mm contiguous acquisition",
+          "Reconstruction": "Bone algorithm: WW: 2500, WL: 450 HU; Soft algorithm for periarticular lipohemarthrosis: WW: 400, WL: 40 HU",
+          "3D VR": "Color-coded 3D volume rendering with femoral subtraction"
+        },
+        "positioning": "Patient supine, knee in neutral extension, centered in scanner gantry.",
+        "notes": "Lipohemarthrosis (fat-blood fluid level in suprapatellar bursa) is pathognomonic for intra-articular fracture communicating with fatty bone marrow."
+      },
+      {
+        "id": "xr_pelvis_hip",
+        "name": "Pelvis & Hip Radiography (AP Pelvis & Frog-Leg Lateral)",
+        "modality": "X-RAY",
+        "indications": [
+          "Femoral neck fracture (intracapsular: subcapital, transcervical; Garden classification)",
+          "Intertrochanteric fracture (extracapsular; Evans / AO classification)",
+          "Osteoarthritis of hip (joint space narrowing, subchondral sclerosis, osteophytes, cysts)",
+          "Femoroacetabular impingement (FAI: Cam deformity alpha angle, Pincer crossover sign)",
+          "Developmental dysplasia of the hip (DDH) and avascular necrosis (Ficat stages)"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "75–85 kVp, 25–40 mAs (with grid)",
+          "SID": "100 cm (40 inches)",
+          "Grid": "Yes (10:1 or 12:1)",
+          "Breathing": "Suspended expiration"
+        },
+        "positioning": "AP Pelvis: Supine, lower limbs internally rotated 15–20° from hips (places femoral necks parallel to IR and eliminates foreshortening). Frog-leg (Modified Cleaves): Knee flexed ~90°, hip abducted 40–45° laterally.",
+        "notes": "Check Shenton's line: smooth continuous curved line formed by inferior border of superior pubic ramus and inferomedial border of femoral neck. Discontinuity indicates fracture or dislocation."
+      },
+      {
+        "id": "xr_knee_series",
+        "name": "Knee Radiography (AP, Lateral Weight-Bearing, Sunrise View)",
+        "modality": "X-RAY",
+        "indications": [
+          "Acute knee trauma (Ottawa Knee Rules: age >=55, isolated patellar tenderness, fibular head tenderness, inability to flex 90°, inability to bear weight)",
+          "Osteoarthritis grading (Kellgren-Lawrence system)",
+          "Patellar subluxation / lateral tilt (Merchant / Sunrise axial view)",
+          "Tibial spine avulsion fracture (ACL insertion avulsion)",
+          "Segond fracture (lateral tibial plateau avulsion, 90% associated with ACL rupture)"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "65–70 kVp, 4–8 mAs",
+          "SID": "100 cm",
+          "Grid": "Non-grid for extremities <= 10 cm, or grid for dense knees",
+          "Projections": "AP Weight-Bearing, True Lateral 20–30° flexion, Merchant/Sunrise 45° axial patellar view"
+        },
+        "positioning": "AP: Patient standing erect with equal weight distribution. Lateral: Patient lateral recumbent, knee flexed 20–30° (tightens patellar tendon and exposes suprapatellar fat pads without effacing joint fluid). Sunrise: Knee flexed 40–45°, CR angled 30° caudad to horizontal.",
+        "notes": "True lateral view allows detection of fat pad displacement and joint effusion measuring >= 5 mm."
+      },
+      {
+        "id": "xr_ankle_series",
+        "name": "Ankle Radiography (AP, Mortise 15° Internal, Lateral)",
+        "modality": "X-RAY",
+        "indications": [
+          "Ankle inversion / eversion sprain (Ottawa Ankle Rules)",
+          "Malleolar fractures (Danis-Weber Type A, B, C; Lauge-Hansen classification)",
+          "Syndesmotic diastasis (tibiofibular clear space >6 mm on mortise)",
+          "Maisonneuve fracture (high fibular neck fracture associated with medial malleolus disruption)",
+          "Talar dome osteochondral defect (OCD)"
+        ],
+        "contrast": "None",
+        "technique": {
+          "kVp / mAs": "60–65 kVp, 3–6 mAs (tabletop, high spatial resolution)",
+          "SID": "100 cm",
+          "Focal Spot": "Small focal spot (0.6 mm)"
+        },
+        "positioning": "Mortise View: Leg and foot internally rotated 15–20° until intermalleolar line is parallel to IR. This rotates the lateral malleolus out of superimposition with tibia, opening the entire uniform 3–4 mm mortise joint space around talus.",
+        "notes": "Always palpate the proximal fibular head in severe ankle injuries to rule out a high Maisonneuve fracture!"
+      },
+      {
+        "id": "mri_hips",
+        "name": "MRI Hips",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T1_TSE_CORONAL",
+          "T2_STIR_CORONAL",
+          "T1_TSE_AXIAL",
+          "T2_STIR_AXIAL",
+          "T2_TSE_SAGITTIAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated LowerLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are normally less than 25 seconds, T1-weighted low-resolution scans.",
+        "notes": "Plan the coronal slices on the axial plane; angle the positioning block parallel to the RT and LT femoral heads. Check the positioning block in the other two planes. An appropriate angle must be given in the sagittal plane (parallel to the femur). The slices should adequately encompass the hip joint"
+      },
+      {
+        "id": "mri_arthro_hip",
+        "name": "MRI Arthrogram Hip Protocol and Planning",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T2_STIR_CORONAL",
+          "T1_TSE_AXIAL",
+          "ARTHROGRAM JOINT INJECTION",
+          "localizer_3plane",
+          "T1_VIBE 3D_DIXON_CORONAL_SFOV"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated LowerLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are normally less than 25 seconds, T1-weighted low-resolution scans.",
+        "notes": "Plan the coronal slices on the axial plane; angle the positioning block parallel to the RT and LT femoral heads. Check the positioning block in the other two planes. An appropriate angle must be given in the sagittal plane (parallel to the femur). The slices should adequately encompass the hip joint"
+      },
+      {
+        "id": "mri_knee",
+        "name": "MRI Knee",
+        "modality": "MRI",
+        "indications": [
+          "localize_3plane",
+          "PD_FAT SAT_AXIAL",
+          "PD_FAT SAT_CORONAL",
+          "T1_TSE_SAGITTAL",
+          "T2_STIR_SAGITTAL",
+          "T2*_MEDIC_SAGITTAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated LowerLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually T1-weighted low-resolution scans that last less than 25 seconds.",
+        "notes": "Plan the axial slices on the coronal plane, angling the Planning block parallel to the medial and lateral condyle of the femur. Verify the Planning block in the other two planes. Provide an appropriate angle in the sagittal plane, perpendicular to the line of the femur and tibia. Ensure that the sli"
+      },
+      {
+        "id": "mri_thigh",
+        "name": "MRI Thigh (Upper Legs) Planning",
+        "modality": "MRI",
+        "indications": [
+          "localize_3plane",
+          "T2_STIR_CORONAL",
+          "T1_TSE_CORONAL",
+          "T2_STIR_AXIAL",
+          "T1_TSE_AXIAL",
+          "T2_TSE_SAGITTAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated LowerLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are normally less than 25 seconds and are T1-weighted low-resolution scans.",
+        "notes": "Plan the coronal slices on the axial plane, and angle the positioning block parallel to the right and left hip joints. Check the positioning block in the other two planes. Ensure an appropriate angle is given in the sagittal plane (parallel to the femoral shaft). The slices must be sufficient to cov"
+      },
+      {
+        "id": "mri_ankle",
+        "name": "Ankle MRI",
+        "modality": "MRI",
+        "indications": [
+          "T2_STIR_AXIAL",
+          "T1_TSE_SAGITTAL",
+          "T2_STIR_SAGITTAL",
+          "PD_CORONAL_FAT SAT"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated LowerLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually less than 25 seconds and consist of T1-weighted, low-resolution scans.",
+        "notes": "Plan the axial slices on the coronal plane and angle the positioning block parallel to the tibio-talar joint. Check the positioning block in the other two planes. An appropriate angle must be given in the sagittal plane, parallel to the tibio-talar joint. The slices should be sufficient to cover the"
+      },
+      {
+        "id": "mri_foot",
+        "name": "Foot MRI",
+        "modality": "MRI",
+        "indications": [
+          "localizer_3plane",
+          "T1_TSE_AXIAL",
+          "T2_STIR_AXIAL",
+          "T1_TSE_CORONAL",
+          "T2_STIR_CORONAL",
+          "T2_STIR_SAGITTAL"
+        ],
+        "contrast": "Non-contrast (flow-dependent / native tissue contrast)",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated LowerLimb Phased Array Coil"
+        },
+        "positioning": "A three-plane localizer must be taken at the beginning to localize and plan the sequences. Localizers are usually less than 25 seconds. T1-weighted low-resolution scans.(",
+        "notes": "Plan the axial slices on the sagittal plane, angling the positioning block perpendicular to the metatarsal and phalanges bones. Check the positioning block in the other two planes. An appropriate angle must be given in the coronal plane (perpendicular to the metatarsal and phalanges bones). The slic"
+      },
+      {
+        "id": "mra_legs",
+        "name": "MRA Legs (Peripheral MRA)",
+        "modality": "MRA",
+        "indications": [
+          "LOCALIZER_3PLANE_LOWERLEG",
+          "LOCALIZER_3PLANE_UPPERLEG",
+          "LOCALIZER__PC2D_SAGITAL_UPPERLEG",
+          "LOCALIZER_3PLANE_ABDOMEN",
+          "LOCALIZER_PC2D_SAGITAL_ABDOMEN",
+          "T1_FLASH_3D_CORONAL_ABDOMEN_PRE"
+        ],
+        "contrast": "IV Gadolinium chelate (0.1 mmol/kg @ 1.5–2.0 mL/s) + 20 mL saline flush",
+        "technique": {
+          "Sequences": "Axial/Coronal T1, T2 TSE, STIR / FS",
+          "Slice": "3.0–4.0 mm / 0.5 mm gap",
+          "Matrix": "320×256 / 512×512",
+          "FOV": "200–240 mm",
+          "Coil": "Dedicated LowerLimb Phased Array Coil"
+        },
+        "positioning": "A three plane T1 localizer must be taken in the upper leg to localize and plan the sequences.",
+        "notes": "A three plane T1 localiser must be taken in the abdomen to localise and plan the sequences."
+      }
+    ]
+  }
+}

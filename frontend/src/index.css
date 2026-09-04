@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{font-family:'Figtree';src:url('/assets/vendor/fonts/Figtree-0.woff2') format('woff2');font-weight:300 900;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url('/assets/vendor/fonts/JetBrainsMono-0.woff2') format('woff2');font-weight:400 600;font-display:swap}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;background:#03070f;color:#eaf2ff;font-family:'Figtree',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden}
+button:focus-visible,input:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(0,229,255,.45);border-radius:9px}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#03070f}
+::-webkit-scrollbar-thumb{background:#1a2e4d;border-radius:999px;border:2px solid #03070f}
